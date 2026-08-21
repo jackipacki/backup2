@@ -1,0 +1,259 @@
+2026-08-21 09:43:25,404 INFO gateway.run: Starting Hermes Gateway...
+2026-08-21 09:43:25,405 INFO gateway.run: Session storage: /data/.hermes/sessions
+2026-08-21 09:43:25,407 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-08-21 09:43:25,408 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-08-21 09:43:25,442 INFO gateway.run: Connecting to telegram...
+2026-08-21 09:43:25,445 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-21 09:43:25,494 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-08-21 09:43:25,494 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-08-21 09:43:25,502 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-08-21 09:43:29,575 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-08-21 09:43:39,605 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-08-21 09:43:39,606 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-08-21 09:43:39,611 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-08-21 09:43:39,784 INFO gateway.run: ✓ telegram connected
+2026-08-21 09:43:39,821 INFO gateway.run: Gateway running with 1 platform(s)
+2026-08-21 09:43:39,832 INFO gateway.run: Channel directory built: 0 target(s)
+2026-08-21 09:43:39,855 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-08-21 09:43:39,869 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-08-21 09:43:39,892 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-08-21 09:43:39,892 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-08-21 09:43:40,845 INFO gateway.run: Press Ctrl+C to stop
+2026-08-21 09:43:40,853 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/data/.hermes/kanban/.dispatcher.lock)
+2026-08-21 09:43:40,855 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=8 (set kanban.max_in_progress in config.yaml to override)
+2026-08-21 09:43:40,864 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-08-21 09:43:45,856 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-08-21 09:44:10,143 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (4 chars)
+2026-08-21 09:44:10,154 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='سلام' reply_to_id=None reply_to_text=''
+2026-08-21 09:44:20,298 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=10.1s api_calls=1 response=442 chars
+2026-08-21 09:44:20,325 INFO gateway.platforms.base: [Telegram] Sending response (442 chars) to 8101830414
+2026-08-21 09:44:37,520 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (19 chars)
+2026-08-21 09:44:37,525 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='همیشه فارسی صحبت کن' reply_to_id=None reply_to_text=''
+2026-08-21 09:44:45,016 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=7.5s api_calls=2 response=212 chars
+2026-08-21 09:44:45,036 INFO gateway.platforms.base: [Telegram] Sending response (212 chars) to 8101830414
+2026-08-21 09:44:46,007 INFO gateway.platforms.base: [Telegram] Sending response (1034 chars) to 8101830414
+2026-08-21 09:45:02,806 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 8101830414
+2026-08-21 09:45:05,920 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (4 chars)
+2026-08-21 09:45:05,925 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='سلام' reply_to_id=None reply_to_text=''
+2026-08-21 09:45:12,033 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=6.1s api_calls=1 response=49 chars
+2026-08-21 09:45:12,052 INFO gateway.platforms.base: [Telegram] Sending response (49 chars) to 8101830414
+2026-08-21 09:45:17,425 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (10 chars)
+2026-08-21 09:45:17,430 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو کی هستی' reply_to_id=None reply_to_text=''
+2026-08-21 09:45:23,014 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=5.6s api_calls=1 response=443 chars
+2026-08-21 09:45:23,035 INFO gateway.platforms.base: [Telegram] Sending response (443 chars) to 8101830414
+2026-08-21 09:45:36,030 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 8101830414
+2026-08-21 09:45:37,710 INFO gateway.run: User opted out of destructive slash confirm (session=agent:main:telegram:dm:8101830414)
+2026-08-21 09:45:37,710 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 5 (session_reset)
+2026-08-21 09:45:38,748 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 8101830414
+2026-08-21 09:45:51,478 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (10 chars)
+2026-08-21 09:45:51,483 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو کی هستی' reply_to_id=None reply_to_text=''
+2026-08-21 09:45:59,689 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=8.2s api_calls=1 response=463 chars
+2026-08-21 09:45:59,717 INFO gateway.platforms.base: [Telegram] Sending response (463 chars) to 8101830414
+2026-08-21 09:46:49,194 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 8101830414
+2026-08-21 09:46:52,420 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 7 (session_reset)
+2026-08-21 09:46:52,635 INFO gateway.platforms.base: [Telegram] Sending response (269 chars) to 8101830414
+2026-08-21 09:53:53,252 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (32 chars)
+2026-08-21 09:53:53,257 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='میتونی ابزار نصب کنی؟ مثلا amass' reply_to_id=None reply_to_text=''
+2026-08-21 09:54:30,209 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=37.0s api_calls=6 response=47 chars
+2026-08-21 09:54:30,239 INFO gateway.platforms.base: [Telegram] Sending response (47 chars) to 8101830414
+2026-08-21 09:55:46,264 INFO gateway.platforms.base: [Telegram] Sending response (222 chars) to 8101830414
+2026-08-21 09:55:46,319 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='ابزار های معروف ریکان و ... رو نصب کن' reply_to_id=None reply_to_text=''
+2026-08-21 09:58:45,432 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-21 09:58:48,439 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[987]
+2026-08-21 09:59:39,892 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=233.6s api_calls=6 response=48 chars
+2026-08-21 09:59:39,956 INFO gateway.platforms.base: [Telegram] Sending response (48 chars) to 8101830414
+2026-08-21 09:59:40,051 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ابزار های معروف ریکان و ... رو نصب ' reply_to_id=None reply_to_text=''
+2026-08-21 10:02:18,072 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=158.0s api_calls=2 response=55 chars
+2026-08-21 10:02:18,134 INFO gateway.platforms.base: [Telegram] Sending response (55 chars) to 8101830414
+2026-08-21 10:02:18,260 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ابزار های معروف ریکان و ... رو نصب ' reply_to_id=None reply_to_text=''
+2026-08-21 10:03:02,370 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=44.1s api_calls=2 response=49 chars
+2026-08-21 10:03:02,423 INFO gateway.platforms.base: [Telegram] Sending response (49 chars) to 8101830414
+2026-08-21 10:03:02,497 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ابزار های معروف ریکان و ... رو نصب ' reply_to_id=None reply_to_text=''
+2026-08-21 10:03:19,164 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=16.7s api_calls=2 response=49 chars
+2026-08-21 10:03:19,276 INFO gateway.platforms.base: [Telegram] Sending response (49 chars) to 8101830414
+2026-08-21 10:03:19,343 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ابزار های معروف ریکان و ... رو نصب ' reply_to_id=None reply_to_text=''
+2026-08-21 10:03:22,812 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=3.5s api_calls=1 response=30 chars
+2026-08-21 10:03:22,897 INFO gateway.platforms.base: [Telegram] Sending response (30 chars) to 8101830414
+2026-08-21 10:03:44,532 INFO gateway.platforms.base: [Telegram] Sending response (106 chars) to 8101830414
+2026-08-21 10:03:44,583 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ابزار های معروف ریکان و ... رو نصب ' reply_to_id=None reply_to_text=''
+2026-08-21 10:04:33,167 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=48.6s api_calls=3 response=33 chars
+2026-08-21 10:04:33,256 INFO gateway.platforms.base: [Telegram] Sending response (33 chars) to 8101830414
+2026-08-21 10:05:02,009 INFO gateway.platforms.base: [Telegram] Sending response (106 chars) to 8101830414
+2026-08-21 10:05:02,084 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ابزار های معروف ریکان و ... رو نصب ' reply_to_id=None reply_to_text=''
+2026-08-21 10:05:05,100 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=3.0s api_calls=1 response=30 chars
+2026-08-21 10:05:05,159 INFO gateway.platforms.base: [Telegram] Sending response (30 chars) to 8101830414
+2026-08-21 10:05:12,709 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (238 chars)
+2026-08-21 10:05:12,715 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یعنی چی؟ ⏸️ Goal paused — judge API returned errors (7 turns). Check the goal_ju' reply_to_id=None reply_to_text=''
+2026-08-21 10:05:56,114 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (48 chars)
+2026-08-21 10:05:59,156 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=always, user=Ares)
+2026-08-21 10:06:32,272 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=79.6s api_calls=3 response=970 chars
+2026-08-21 10:06:32,292 INFO gateway.platforms.base: [Telegram] Sending response (970 chars) to 8101830414
+2026-08-21 10:07:08,864 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[/learn] The user wants you to learn a reusable skill from the request below, an' reply_to_id=None reply_to_text=''
+2026-08-21 10:08:33,928 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=85.1s api_calls=5 response=58 chars
+2026-08-21 10:08:33,946 INFO gateway.platforms.base: [Telegram] Sending response (58 chars) to 8101830414
+2026-08-21 10:11:03,139 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (16 chars)
+2026-08-21 10:11:03,146 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='exploitdb نصب کن' reply_to_id=None reply_to_text=''
+2026-08-21 10:11:33,388 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=30.2s api_calls=5 response=68 chars
+2026-08-21 10:11:33,413 INFO gateway.platforms.base: [Telegram] Sending response (68 chars) to 8101830414
+2026-08-21 10:13:23,234 INFO gateway.platforms.base: [Telegram] Sending response (317 chars) to 8101830414
+2026-08-21 10:13:23,308 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='چطوری نصب کردی؟ چیا در کل نصب کردی؟ یه تستشون بکن ببینم اسکیل هم در اخر بنویس بر' reply_to_id=None reply_to_text=''
+2026-08-21 10:14:59,482 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-21 10:15:06,308 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=103.0s api_calls=7 response=48 chars
+2026-08-21 10:15:06,414 INFO gateway.platforms.base: [Telegram] Sending response (48 chars) to 8101830414
+2026-08-21 10:15:06,524 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: چطوری نصب کردی؟ چیا در کل نصب کردی؟' reply_to_id=None reply_to_text=''
+2026-08-21 10:15:11,788 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=5.3s api_calls=1 response=63 chars
+2026-08-21 10:15:11,841 INFO gateway.platforms.base: [Telegram] Sending response (63 chars) to 8101830414
+2026-08-21 10:15:11,900 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: چطوری نصب کردی؟ چیا در کل نصب کردی؟' reply_to_id=None reply_to_text=''
+2026-08-21 10:15:42,773 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=30.9s api_calls=5 response=1308 chars
+2026-08-21 10:15:42,834 INFO gateway.platforms.base: [Telegram] Sending response (1308 chars) to 8101830414
+2026-08-21 10:15:42,949 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: چطوری نصب کردی؟ چیا در کل نصب کردی؟' reply_to_id=None reply_to_text=''
+2026-08-21 10:15:50,868 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=7.9s api_calls=1 response=772 chars
+2026-08-21 10:15:50,923 INFO gateway.platforms.base: [Telegram] Sending response (772 chars) to 8101830414
+2026-08-21 10:15:51,080 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: چطوری نصب کردی؟ چیا در کل نصب کردی؟' reply_to_id=None reply_to_text=''
+2026-08-21 10:15:55,257 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=4.2s api_calls=1 response=205 chars
+2026-08-21 10:15:55,310 INFO gateway.platforms.base: [Telegram] Sending response (205 chars) to 8101830414
+2026-08-21 10:18:47,752 INFO gateway.platforms.base: [Telegram] Sending response (255 chars) to 8101830414
+2026-08-21 10:18:47,819 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='خب با همه ی ابزار ها یه تست از football-tehran.com بگیر و نتیجه رو بده' reply_to_id=None reply_to_text=''
+2026-08-21 10:21:27,085 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=159.3s api_calls=6 response=62 chars
+2026-08-21 10:21:27,183 INFO gateway.platforms.base: [Telegram] Sending response (62 chars) to 8101830414
+2026-08-21 10:21:27,265 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: خب با همه ی ابزار ها یه تست از foot' reply_to_id=None reply_to_text=''
+2026-08-21 10:24:16,468 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (47 chars)
+2026-08-21 10:25:17,549 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (47 chars)
+2026-08-21 10:27:15,382 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=348.1s api_calls=6 response=141 chars
+2026-08-21 10:27:15,531 INFO gateway.platforms.base: [Telegram] Sending response (141 chars) to 8101830414
+2026-08-21 10:27:15,616 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: خب با همه ی ابزار ها یه تست از foot' reply_to_id=None reply_to_text=''
+2026-08-21 10:29:05,690 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=110.1s api_calls=2 response=20 chars
+2026-08-21 10:29:05,748 INFO gateway.platforms.base: [Telegram] Sending response (20 chars) to 8101830414
+2026-08-21 10:29:05,825 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: خب با همه ی ابزار ها یه تست از foot' reply_to_id=None reply_to_text=''
+2026-08-21 10:29:09,339 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (56 chars)
+2026-08-21 10:29:19,738 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=13.9s api_calls=1 response=633 chars
+2026-08-21 10:29:19,860 INFO gateway.platforms.base: [Telegram] Sending response (633 chars) to 8101830414
+2026-08-21 10:29:19,928 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: خب با همه ی ابزار ها یه تست از foot' reply_to_id=None reply_to_text=''
+2026-08-21 10:29:42,620 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=22.7s api_calls=1 response=4005 chars
+2026-08-21 10:29:42,678 INFO gateway.platforms.base: [Telegram] Sending response (4005 chars) to 8101830414
+2026-08-21 10:32:31,181 INFO gateway.platforms.base: [Telegram] Sending response (2919 chars) to 8101830414
+2026-08-21 10:32:31,289 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو دستیار  من برای یافت باگ در باگ بانتی هستی خب از اولین لیست وبسایت های دارای ' reply_to_id=None reply_to_text=''
+2026-08-21 10:34:27,798 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=116.5s api_calls=2 response=332 chars
+2026-08-21 10:34:27,891 INFO gateway.platforms.base: [Telegram] Sending response (332 chars) to 8101830414
+2026-08-21 10:34:27,953 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تو دستیار  من برای یافت باگ در باگ ' reply_to_id=None reply_to_text=''
+2026-08-21 10:34:55,215 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=27.3s api_calls=2 response=42 chars
+2026-08-21 10:34:55,273 INFO gateway.platforms.base: [Telegram] Sending response (42 chars) to 8101830414
+2026-08-21 10:34:55,334 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تو دستیار  من برای یافت باگ در باگ ' reply_to_id=None reply_to_text=''
+2026-08-21 10:36:23,380 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=88.0s api_calls=2 response=51 chars
+2026-08-21 10:36:23,481 INFO gateway.platforms.base: [Telegram] Sending response (51 chars) to 8101830414
+2026-08-21 10:36:23,559 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تو دستیار  من برای یافت باگ در باگ ' reply_to_id=None reply_to_text=''
+2026-08-21 10:37:29,629 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=66.1s api_calls=2 response=65 chars
+2026-08-21 10:37:29,690 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 8101830414
+2026-08-21 10:37:29,767 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تو دستیار  من برای یافت باگ در باگ ' reply_to_id=None reply_to_text=''
+2026-08-21 10:37:52,249 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=22.5s api_calls=1 response=2180 chars
+2026-08-21 10:37:52,304 INFO gateway.platforms.base: [Telegram] Sending response (2180 chars) to 8101830414
+2026-08-21 10:39:21,524 INFO gateway.platforms.base: [Telegram] Sending response (350 chars) to 8101830414
+2026-08-21 10:39:21,564 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تا وقتی به یک نفوذ کامل نرسیدی ادامه بده منظورم از نفوذ کامل استخراج دیتابیس یا ' reply_to_id=None reply_to_text=''
+2026-08-21 10:39:30,013 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=8.4s api_calls=1 response=62 chars
+2026-08-21 10:39:30,104 INFO gateway.platforms.base: [Telegram] Sending response (62 chars) to 8101830414
+2026-08-21 10:39:30,227 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 10:40:23,875 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=53.6s api_calls=2 response=70 chars
+2026-08-21 10:40:23,928 INFO gateway.platforms.base: [Telegram] Sending response (70 chars) to 8101830414
+2026-08-21 10:40:24,005 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 10:40:55,141 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=31.1s api_calls=2 response=53 chars
+2026-08-21 10:40:55,199 INFO gateway.platforms.base: [Telegram] Sending response (53 chars) to 8101830414
+2026-08-21 10:40:55,306 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 10:42:07,453 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=72.1s api_calls=2 response=104 chars
+2026-08-21 10:42:07,589 INFO gateway.platforms.base: [Telegram] Sending response (104 chars) to 8101830414
+2026-08-21 10:42:07,683 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 10:42:43,508 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=35.8s api_calls=2 response=26 chars
+2026-08-21 10:42:43,563 INFO gateway.platforms.base: [Telegram] Sending response (26 chars) to 8101830414
+2026-08-21 10:43:07,254 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (268 chars)
+2026-08-21 10:43:07,261 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='⏸️ Goal paused — judge API returned errors (5 turns). Check the goal_judge provi' reply_to_id=None reply_to_text=''
+2026-08-21 10:44:06,523 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=59.3s api_calls=4 response=446 chars
+2026-08-21 10:44:06,544 INFO gateway.platforms.base: [Telegram] Sending response (446 chars) to 8101830414
+2026-08-21 10:44:21,857 INFO gateway.platforms.base: [Telegram] Sending response (234 chars) to 8101830414
+2026-08-21 10:44:21,905 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 10:45:11,241 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=49.3s api_calls=2 response=67 chars
+2026-08-21 10:45:11,348 INFO gateway.platforms.base: [Telegram] Sending response (67 chars) to 8101830414
+2026-08-21 10:50:01,624 INFO gateway.platforms.base: [Telegram] Sending response (234 chars) to 8101830414
+2026-08-21 10:50:01,787 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 10:50:38,794 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=37.0s api_calls=2 response=35 chars
+2026-08-21 10:50:38,901 INFO gateway.platforms.base: [Telegram] Sending response (35 chars) to 8101830414
+2026-08-21 11:15:03,762 INFO gateway.platforms.base: [Telegram] Sending response (234 chars) to 8101830414
+2026-08-21 11:15:03,830 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 11:16:04,792 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=61.0s api_calls=3 response=45 chars
+2026-08-21 11:16:04,894 INFO gateway.platforms.base: [Telegram] Sending response (45 chars) to 8101830414
+2026-08-21 12:00:14,136 INFO gateway.platforms.base: [Telegram] Sending response (234 chars) to 8101830414
+2026-08-21 12:00:14,204 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تا وقتی به یک نفوذ کامل نرسیدی ادام' reply_to_id=None reply_to_text=''
+2026-08-21 12:01:01,221 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=47.0s api_calls=2 response=38 chars
+2026-08-21 12:01:01,350 INFO gateway.platforms.base: [Telegram] Sending response (38 chars) to 8101830414
+2026-08-21 12:12:09,960 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 44 (session_reset)
+2026-08-21 12:12:09,997 INFO gateway.platforms.base: [Telegram] Sending response (272 chars) to 8101830414
+2026-08-21 12:13:28,129 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (298 chars)
+2026-08-21 12:13:28,134 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='کاری کن مدل دیفالت openai-api/free باشه  و اینکه دیگه این خطا رخ نده ⏸️ Goal pau' reply_to_id=None reply_to_text=''
+2026-08-21 12:14:09,905 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=41.8s api_calls=7 response=428 chars
+2026-08-21 12:14:09,938 INFO gateway.platforms.base: [Telegram] Sending response (428 chars) to 8101830414
+2026-08-21 12:23:39,101 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 46 (session_reset)
+2026-08-21 12:23:39,425 INFO gateway.platforms.base: [Telegram] Sending response (285 chars) to 8101830414
+2026-08-21 12:23:46,450 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (1 chars)
+2026-08-21 12:23:46,456 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='ب' reply_to_id=None reply_to_text=''
+2026-08-21 12:23:47,746 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1.3s api_calls=1 response=56 chars
+2026-08-21 12:23:47,747 INFO gateway.run: Transient agent failure in session 20260821_122339_4d755572 — persisting user message so conversation context is preserved on retry.
+2026-08-21 12:23:47,783 INFO gateway.platforms.base: [Telegram] Sending response (120 chars) to 8101830414
+2026-08-21 12:24:15,598 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (16 chars)
+2026-08-21 12:24:15,605 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='مدل رو free بزار' reply_to_id=None reply_to_text=''
+2026-08-21 12:24:15,778 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=0.2s api_calls=1 response=56 chars
+2026-08-21 12:24:15,778 INFO gateway.run: Transient agent failure in session 20260821_122339_4d755572 — persisting user message so conversation context is preserved on retry.
+2026-08-21 12:24:15,798 INFO gateway.platforms.base: [Telegram] Sending response (120 chars) to 8101830414
+2026-08-21 12:24:53,146 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (31 chars)
+2026-08-21 12:24:53,153 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='مدل دیفالت رو تنظیم کن روی free' reply_to_id=None reply_to_text=''
+2026-08-21 12:25:10,755 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=17.6s api_calls=5 response=42 chars
+2026-08-21 12:25:10,779 INFO gateway.platforms.base: [Telegram] Sending response (42 chars) to 8101830414
+2026-08-21 12:42:49,772 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (45 chars)
+2026-08-21 12:42:49,779 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یه لیست ۱۰ تایی از منابع اخبار اوسینت بهم بده' reply_to_id=None reply_to_text=''
+2026-08-21 12:43:10,927 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=21.1s api_calls=1 response=1214 chars
+2026-08-21 12:43:10,946 INFO gateway.platforms.base: [Telegram] Sending response (1214 chars) to 8101830414
+2026-08-21 12:44:18,937 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (107 chars)
+2026-08-21 12:44:18,944 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یه لیست ۱۰ تایی از منابع اخبار اوسینت بهم بده  اگه منبع اوسینت کم اومد برای امنی' reply_to_id=None reply_to_text=''
+2026-08-21 12:44:52,904 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=34.0s api_calls=2 response=1244 chars
+2026-08-21 12:44:52,929 INFO gateway.platforms.base: [Telegram] Sending response (1244 chars) to 8101830414
+2026-08-21 12:46:19,070 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (63 chars)
+2026-08-21 12:46:19,076 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='به صورت پشت سر هم که هرکدوم توی یک خط باشن داخل یه   تحویلم بده' reply_to_id=None reply_to_text=''
+2026-08-21 12:46:24,418 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=5.3s api_calls=1 response=352 chars
+2026-08-21 12:46:24,439 INFO gateway.platforms.base: [Telegram] Sending response (352 chars) to 8101830414
+2026-08-21 12:46:44,617 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (72 chars)
+2026-08-21 12:46:44,622 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='به صورت پشت سر هم که هرکدوم توی یک خط باشن داخل یه   تحویلم بده فقط \u200curl' reply_to_id=None reply_to_text=''
+2026-08-21 12:46:48,401 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=3.8s api_calls=1 response=181 chars
+2026-08-21 12:46:48,426 INFO gateway.platforms.base: [Telegram] Sending response (181 chars) to 8101830414
+2026-08-21 13:06:35,038 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (93 chars)
+2026-08-21 13:06:35,044 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یه سرویس ایمیل رایگان برای ارسال ایمیل معرفی کن که ساخت حساب توش شماره تلفن نخوا' reply_to_id=None reply_to_text=''
+2026-08-21 13:06:48,911 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=13.9s api_calls=2 response=623 chars
+2026-08-21 13:06:48,936 INFO gateway.platforms.base: [Telegram] Sending response (623 chars) to 8101830414
+2026-08-21 13:07:13,548 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (145 chars)
+2026-08-21 13:07:13,554 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یه سرویس ایمیل رایگان برای ارسال ایمیل معرفی کن که ساخت حساب توش شماره تلفن نخوا' reply_to_id=None reply_to_text=''
+2026-08-21 13:07:43,104 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=29.5s api_calls=3 response=1047 chars
+2026-08-21 13:07:43,145 INFO gateway.platforms.base: [Telegram] Sending response (1038 chars) to 8101830414
+2026-08-21 13:09:36,942 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (24 chars)
+2026-08-21 13:09:36,947 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='هرسه تاشون شماره میخواست' reply_to_id=None reply_to_text=''
+2026-08-21 13:10:23,346 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=46.4s api_calls=3 response=1041 chars
+2026-08-21 13:10:23,374 INFO gateway.platforms.base: [Telegram] Sending response (1037 chars) to 8101830414
+2026-08-21 13:12:53,439 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (100 chars)
+2026-08-21 13:12:53,446 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='چرا انقدر این وبسایت ها دردسر دارن یه ایمیله دیگه راه ساده تری نیست که خیلی ساده' reply_to_id=None reply_to_text=''
+2026-08-21 13:13:01,898 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=8.5s api_calls=1 response=546 chars
+2026-08-21 13:13:01,920 INFO gateway.platforms.base: [Telegram] Sending response (546 chars) to 8101830414
+2026-08-21 13:13:25,325 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (38 chars)
+2026-08-21 13:13:25,330 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='سرویس دیگه؟ ازین سرویسای کم شناخته شده' reply_to_id=None reply_to_text=''
+2026-08-21 13:14:05,767 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=40.4s api_calls=3 response=1202 chars
+2026-08-21 13:14:05,789 INFO gateway.platforms.base: [Telegram] Sending response (1193 chars) to 8101830414
+2026-08-21 13:15:29,973 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (38 chars)
+2026-08-21 13:15:29,980 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='خودم با یه دامنه نمیتونم ایمیل بفرستم؟' reply_to_id=None reply_to_text=''
+2026-08-21 13:16:27,696 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 60 (new_command)
+2026-08-21 13:16:27,700 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 61 (session_reset)
+2026-08-21 13:16:27,751 INFO gateway.platforms.base: [Telegram] Sending command '/new' response (225 chars) to 8101830414
+2026-08-21 13:18:47,330 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (2141 chars)
+2026-08-21 13:18:47,336 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یه ایمیل تستی به این برام بفرست MrAress@proton.me  # MailSlurp  MailSlurp provid' reply_to_id=None reply_to_text=''
+2026-08-21 13:23:40,123 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=292.8s api_calls=20 response=398 chars
+2026-08-21 13:23:40,151 INFO gateway.platforms.base: [Telegram] Sending response (398 chars) to 8101830414
+2026-08-21 13:27:32,433 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (4 chars)
+2026-08-21 13:27:32,439 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='سلام' reply_to_id=None reply_to_text=''
+2026-08-21 13:27:38,320 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=5.9s api_calls=1 response=27 chars
+2026-08-21 13:27:38,345 INFO gateway.platforms.base: [Telegram] Sending response (27 chars) to 8101830414
+2026-08-21 13:31:11,842 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (265 chars)
+2026-08-21 13:31:11,848 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='هر ۲۴ ساعت یکبار یک بک آپ از کل فایل هات بگیر و توی اینجا اپلود کن   https://git' reply_to_id=None reply_to_text=''
+2026-08-21 13:32:00,334 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=always, user=Ares)

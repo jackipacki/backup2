@@ -1,0 +1,28 @@
+{
+  "rule_ids": [
+    "curl_pipe_shell"
+  ],
+  "severity": "HIGH",
+  "command_redacted": "\nTOKEN=[REDACTED] /data/.backup_token)\n# Check the latest commit\ncurl -s -H \"Aut...",
+  "findings": [
+    {
+      "rule_id": "curl_pipe_shell",
+      "severity": "HIGH",
+      "title": "Pipe to interpreter: curl | python3",
+      "description": "Command pipes output from 'curl' directly to interpreter 'python3'. Downloaded content will be executed without inspection.\n  Safer: tirith run https://api.github.com/repos/jackipacki/backup2/commits  — or: vet https://api.github.com/repos/jackipacki/backup2/commits  (https://getvet.sh)",
+      "evidence": [
+        {
+          "type": "command_pattern",
+          "pattern": "pipe to interpreter",
+          "matched": "curl -s -H \"Authorization: token $TOKEN\" \"https://api.github.com/repos/jackipacki/backup2/commits\" | python3 -c \"\nimport json, sys\ncommits = json.load(sys.stdin)\nfor c in commits:\n    print(f'{c[\\\"sha\\\"][:8]} {c[\\\"commit\\\"][\\\"message\\\"][:60]}')\n\""
+        },
+        {
+          "type": "url",
+          "raw": "https://api.github.com/repos/jackipacki/backup2/commits"
+        }
+      ],
+      "mitre_id": "T1059.004"
+    }
+  ],
+  "timestamp": "2026-08-21T13:58:15.891026209+00:00"
+}

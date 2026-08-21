@@ -1,0 +1,1 @@
+{"pid": 2, "kind": "hermes-gateway", "argv": ["/opt/venv/bin/hermes", "gateway"], "start_time": 264678083, "hermes_home": "/data/.hermes", "scope": "telegram-bot-token", "identity_hash": "8f55bbbf4a17e956", "metadata": {"platform": "telegram"}, "updated_at": "2026-08-21T09:43:25.445033+00:00", "profile": "default"}
