@@ -1,28 +1,22 @@
 {
   "rule_ids": [
-    "curl_pipe_shell"
+    "raw_ip_url"
   ],
-  "severity": "HIGH",
-  "command_redacted": "\nTOKEN=[REDACTED] /data/.backup_token)\n# Check the latest commit\ncurl -s -H \"Aut...",
+  "severity": "MEDIUM",
+  "command_redacted": "# رویکرد جدید ۲۷: تست با credential های رایج برای IC...",
   "findings": [
     {
-      "rule_id": "curl_pipe_shell",
-      "severity": "HIGH",
-      "title": "Pipe to interpreter: curl | python3",
-      "description": "Command pipes output from 'curl' directly to interpreter 'python3'. Downloaded content will be executed without inspection.\n  Safer: tirith run https://api.github.com/repos/jackipacki/backup2/commits  — or: vet https://api.github.com/repos/jackipacki/backup2/commits  (https://getvet.sh)",
+      "rule_id": "raw_ip_url",
+      "severity": "MEDIUM",
+      "title": "URL uses raw IP address",
+      "description": "URL points to IP address 63.142.180.157 instead of a domain name",
       "evidence": [
         {
-          "type": "command_pattern",
-          "pattern": "pipe to interpreter",
-          "matched": "curl -s -H \"Authorization: token $TOKEN\" \"https://api.github.com/repos/jackipacki/backup2/commits\" | python3 -c \"\nimport json, sys\ncommits = json.load(sys.stdin)\nfor c in commits:\n    print(f'{c[\\\"sha\\\"][:8]} {c[\\\"commit\\\"][\\\"message\\\"][:60]}')\n\""
-        },
-        {
           "type": "url",
-          "raw": "https://api.github.com/repos/jackipacki/backup2/commits"
+          "raw": "63.142.180.157"
         }
-      ],
-      "mitre_id": "T1059.004"
+      ]
     }
   ],
-  "timestamp": "2026-08-21T13:58:15.891026209+00:00"
+  "timestamp": "2026-08-22T13:19:17.840608697+00:00"
 }

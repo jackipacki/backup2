@@ -1,1 +1,4 @@
 {"ts": "2026-08-21T09:43:24.209066+00:00", "tag": "gateway.start", "pid": 2, "python": "3.11.16", "platform": "linux", "replace": false, "argv": ["/opt/venv/bin/hermes", "gateway"], "stdin_is_tty": false, "console_window_attached": null, "detached": false, "breakaway": null, "absorb_windows_console_controls": false}
+{"ts": "2026-08-21T21:56:39.745355+00:00", "tag": "asyncio.run.returned", "pid": 2, "python": "3.11.16", "platform": "linux", "success": false}
+{"ts": "2026-08-21T21:56:39.746150+00:00", "tag": "gateway.exit_nonzero", "pid": 2, "python": "3.11.16", "platform": "linux"}
+{"ts": "2026-08-21T21:56:41.080578+00:00", "tag": "gateway.start", "pid": 2, "python": "3.11.16", "platform": "linux", "replace": false, "argv": ["/opt/venv/bin/hermes", "gateway"], "stdin_is_tty": false, "console_window_attached": null, "detached": false, "breakaway": null, "absorb_windows_console_controls": false}

@@ -18,11 +18,25 @@ approvals:
 command_allowlist:
   - script execution via -e/-c flag
   - recursive delete
+gateway:
+  platforms:
+    telegram:
+      extra:
+        group_policy: mention
+        guest_mode: true
 onboarding:
   seen:
     profile_build_offered: true
     busy_input_prompt: true
 _config_version: 38
+platforms:
+  telegram:
+    enabled: true
+    home_channel:
+      platform: telegram
+      chat_id: '8101830414'
+      name: Ares
+      user_id: '8101830414'
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,

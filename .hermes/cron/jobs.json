@@ -1,0 +1,61 @@
+{
+  "jobs": [
+    {
+      "id": "7d76b6e878d7",
+      "name": "backup-to-github",
+      "prompt": "Run the backup script at /data/.backup.sh which backs up /data files to GitHub repo jackipacki/backup2. Execute: bash /data/.backup.sh 2>&1 | tail -20. Report the result.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "free",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 1440,
+        "display": "every 1440m"
+      },
+      "schedule_display": "every 1440m",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-21T13:59:49.863505+00:00",
+      "next_run_at": "2026-08-23T14:00:09.057782+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8101830414",
+        "chat_name": "Ares",
+        "thread_id": null,
+        "user_id": "8101830414",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "fire_claim": {
+        "at": "2026-08-22T14:00:09.062273+00:00",
+        "by": "099cb69092dc:2:1e4f2e509e7f4a41bc2468de48a70595"
+      }
+    }
+  ],
+  "updated_at": "2026-08-22T14:00:09.062396+00:00"
+}

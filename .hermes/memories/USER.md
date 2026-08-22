@@ -2,7 +2,7 @@ Always respond in Farsi (Persian).
 §
 Output style: Ultra-minimalist. One item per line, no headers/emojis/descriptions unless asked. URLs only = raw URLs. User frustrated with verbose output and heavy formatting.
 §
-User is interested in cybersecurity/pentesting. Installed 16 recon tools (amass, subfinder, httpx, nuclei, naabu, katana, uncover, gobuster, dirsearch, ffuf, whatweb, waybackurls, nmap, masscan, whois, dig) on their Debian 13 system. Wants to use them for recon work.
+User is interested in cybersecurity/bug bounty hunting. Installed 16 recon tools on Debian 13. Wants to find high-impact vulns: DB extraction, file upload/modification, RCE. Prefers Farsi/Persian. Values learning - wants detailed methodology explanations. Wants testing/verification before reporting. Wants to continue until complete compromise.
 §
 User cannot use services that require phone number verification during signup (email, API platforms, etc.). Always recommend alternatives that skip phone verification.
 §
