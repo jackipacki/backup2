@@ -1,0 +1,5 @@
+[user]
+	email = backup@hermes.ai
+	name = Hermes Backup Bot
+[credential]
+	helper = store

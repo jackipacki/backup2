@@ -1,9 +1,0 @@
-=== shutdown diagnostic @ SIGTERM ===
---- date ---
-2026-08-21T21:56:36Z
---- ps auxf (top 60 by cpu) ---
---- pstree of self ---
---- /proc/loadavg ---
-5.69 6.03 6.18 7/24449 7131
---- recent dmesg (oom/killed) ---
-=== end ===
