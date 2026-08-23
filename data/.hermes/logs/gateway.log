@@ -118,3 +118,6 @@
 2026-08-23 08:22:52,838 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=15.3s api_calls=1 response=181 chars
 2026-08-23 08:23:07,748 INFO gateway.platforms.base: [Telegram] Sending response (181 chars) to 8101830414
 2026-08-23 08:23:07,839 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:23:45,981 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=38.1s api_calls=2 response=58 chars
+2026-08-23 08:24:00,944 INFO gateway.platforms.base: [Telegram] Sending response (58 chars) to 8101830414
+2026-08-23 08:24:01,065 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
