@@ -1,0 +1,59 @@
+{
+  "jobs": [
+    {
+      "id": "72cc36357d3d",
+      "name": "backup2-daily",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "backup.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 0 * * *",
+        "display": "0 0 * * *"
+      },
+      "schedule_display": "0 0 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-23T08:25:21.070349+00:00",
+      "next_run_at": "2026-08-25T00:00:00+00:00",
+      "last_run_at": "2026-08-23T08:25:44.232825+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "8101830414",
+        "chat_name": "Ares",
+        "thread_id": null,
+        "user_id": "8101830414",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": "/data/workspace",
+      "fire_claim": {
+        "at": "2026-08-24T00:00:14.526044+00:00",
+        "by": "46a2b1a3e8bb:2:494c3c306c294e50b97d9edaf7fd0fd4"
+      }
+    }
+  ],
+  "updated_at": "2026-08-24T00:00:14.526185+00:00"
+}

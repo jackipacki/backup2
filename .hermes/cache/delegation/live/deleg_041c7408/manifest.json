@@ -1,0 +1,31 @@
+{
+  "delegation_id": "deleg_041c7408",
+  "started": "2026-08-23 18:28:04",
+  "task_count": 3,
+  "model": null,
+  "provider": null,
+  "tasks": [
+    {
+      "index": 0,
+      "goal": "Find the REAL format and any CONCRETE examples of OAuth2 'applicationId' used by OMPFinex (Iranian crypto exchange). This is for an authorized bug bounty test.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_041c7408/task-0.log",
+      "status": "completed",
+      "exit_reason": "max_iterations"
+    },
+    {
+      "index": 1,
+      "goal": "Determine whether a headless-browser end-to-end PoC is feasible on this machine, and if YES, actually build (but only smoke-test locally) a Playwright/Selenium script that would prove an OAuth2 postMessage token-theft against my.ompfinex.com.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_041c7408/task-1.log",
+      "status": "completed",
+      "exit_reason": "max_iterations"
+    },
+    {
+      "index": 2,
+      "goal": "Verify the SERVER-SIDE contract of the OMPFinex OAuth2 authorize endpoint using a real (user-owned) session token: prove that POST /v1/oauth/authorize with a syntactically-valid-but-fake applicationId reaches application validation (NOT auth failure), and map what ID formats pass client-side format validation.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_041c7408/task-2.log",
+      "status": "completed",
+      "exit_reason": "max_iterations"
+    }
+  ],
+  "completed": "2026-08-23 18:28:46"
+}

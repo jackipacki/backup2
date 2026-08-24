@@ -1,0 +1,114 @@
+تو دستیار من برای باگ بانتی هستی
+از اولین مورد لیست شروع میکنیم
+لینک تایید وجود برنامه بانتی: https://www.ravro.ir/fa/target/spara/target-634b4e72-3954-4539-ad73-74424d33544f
+قوانین:
+۱. تنها آسیب‌پذیری‌های شامل اکسپلویت بررسی خواهند شد.
+
+۲. از اختلال در عملکرد و فرآیند‌های سامانه‌‎های میدان اجتناب کنید.
+
+شرایط پرداخت:
+عنوان  حیاتی  بالا  متوسط  پایین
+Remote Code Excution  ۱۰۰,۰۰۰,۰۰۰  ۸۰,۰۰۰,۰۰۰  ۴۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰
+SQL Injection  ۸۰,۰۰۰,۰۰۰  ۶۰,۰۰۰,۰۰۰  ۲۵,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰
+LFI - دسترسی به سورس کد های سایت  ۷۰,۰۰۰,۰۰۰  ۵۰,۰۰۰,۰۰۰  ۳۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰
+Bypass Authentication - دور زدن احراز هویت سایت  ۷۰,۰۰۰,۰۰۰  ۵۰,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  -
+PII / Access Control - دسترسی به تمام اطلاعات خصوصی کاربران  ۷۰,۰۰۰,۰۰۰  ۵۰,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  ۵,۰۰۰,۰۰۰
+Account TakeOver - تصاحب حساب کاربری بدون کلیک  ۷۰,۰۰۰,۰۰۰  ۳۵,۰۰۰,۰۰۰  ۲۵,۰۰۰,۰۰۰  -
+Double spending  ۶۰,۰۰۰,۰۰۰  ۴۰,۰۰۰,۰۰۰  ۱۵,۰۰۰,۰۰۰  -
+SSRF - متغیر به شرایط حساسیت و تاثیرگذاری  ۶۰,۰۰۰,۰۰۰  ۴۰,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  -
+Account takeover - تصاحب حساب کاربری با کلیک  ۵۰,۰۰۰,۰۰۰  ۳۰,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  -
+Misconfiguration Oauth - با قابلیت بهره‌برداری  ۵۰,۰۰۰,۰۰۰  ۳۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -
+Race Condition (تراکنش های مالی، کد تخفیف)  ۵۰,۰۰۰,۰۰۰  ۳۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -
+XSS - Cross Site Script  ۴۰,۰۰۰,۰۰۰  ۲۵,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -
+PII / Access Control - دسترسی به بخشی از اطلاعات خصوصی کاربران  ۴۰,۰۰۰,۰۰۰  ۲۵,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -
+IDOR - متغییر به شرایط حساسیت و تاثیرگذاری  ۴۰,۰۰۰,۰۰۰  ۲۵,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -
+XXE  ۳۰,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  -  -
+آسیب‌پذیری منطقی  ۵۰,۰۰۰,۰۰۰  ۳۵,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  -
+Mass Assignment  ۳۰,۰۰۰,۰۰۰  ۲۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -
+Rate Limit (SMS Flooding, HTTP Flooding, OTP Code)  ۲۰,۰۰۰,۰۰۰  ۱۵,۰۰۰,۰۰۰  -  -
+Cache Poisoning  ۲۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -  -
+Bypass Captcha  ۲۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -  -
+Open Redirect (GET) - متغیر به شرایط حساسیت و تاثیرگذاری  ۱۵,۰۰۰,۰۰۰  ۸,۰۰۰,۰۰۰  -  -
+Information Disclosure - متغیر به شرایط حساسیت و تاثیرگذاری  ۲۰,۰۰۰,۰۰۰  ۱۵,۰۰۰,۰۰۰  ۷,۰۰۰,۰۰۰  ۲,۰۰۰,۰۰۰
+HTTP Smuggling – با قابلیت بهره‌برداری  ۲۰,۰۰۰,۰۰۰  ۱۰,۰۰۰,۰۰۰  -  -
+HTTP Parameter Pollution  ۱۰,۰۰۰,۰۰۰  ۵,۰۰۰,۰۰۰  -  -
+
+
+با استفاده از اسکیل هایی که آموختی
+
+۱. هر چیزی که پیدا کردی رو دقیق و کامل توضیح بده که چیه و چطور پیداش کردی و چطوریه و چطور کار 
+ میکنه و فرض کن من هیچی بلد نیستم
+۲. توی مسیر هرکاری که میکنی رو هم با قانون بالایی بهم توضیح بده
+۳. اگر چیزی پیدا کردی باز هم ادامه بده و متوقف نشو
+
+#تا وقتی نتونستی نفوذ کنی ادامه بده#
+[
+    {
+        "domain": "podspace.ir",
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "podspace.callback-url",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "https%3A%2F%2Fpodspace.ir%2Fauth%2Flogin"
+    },
+    {
+        "domain": "podspace.ir",
+        "expirationDate": 1819011795.39215,
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "cookiesession1",
+        "path": "/",
+        "sameSite": null,
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "678B286E7C9CCDD693BF20766DDB5609"
+    },
+    {
+        "domain": "podspace.ir",
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "podspace.csrf-token",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "1e19039e870643be6c4f46cf81a106900ca467216baf4bd792b8bdc7ef7c678d%7C5a4a400e1030c1cfe107e6fbf24c7106ad56fffe94565125c86bfc3a28891abc"
+    },
+    {
+        "domain": "podspace.ir",
+        "expirationDate": 1790068474.181512,
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "podspace.session-token",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoiZnFFLUx6VHdtckhRYjRSbGtwZEdoMXl2SldFZ0U1c21EQ0VGazgtZ3o4VURQTVFnRFJNaG9rTnlyQ2VueFhnNU1hLVR6MkJadlNhRXhmQmlnUFJCM2cifQ..7I1hxpf1Ngck0ww1UE2dag.IcAWQat42rUj0FFnEEqgl3sRqvEJfz_vu9PPpv76OkAvqBq0KMyK2SXnS3zr5yIpE0odmvqFjQe7y-77tA2kgR8Wm_2yO9QEI1t_8hm1mYaHUZwkswMpV7gap7V6-zbXjboXWPfr-GXsetcx7c_VdiK-16fcKpP5ZdA4yorgwfc_XrjT885ySQweUXqXd0zD2m_0KUw4H5dMtpVRBD_nf6ZlCb_8acOAchOS1Oq23yHf2daleFbe7orC6jGbbEA50Qr_PCJAMsrUH5OiKL3jqm1uxs3h2j1pccY3vnx-eL52s1of-TuF1YIKI0M07XhWYOeAicEvBmjzn_N1RPQuVnN8ZntRlPze4Jfk3QplAL5mh44otS77LYxSIy_gR07uvD-8H7w8z_6m7sBn4oOZ4fHrMAW0fO5mEaFywkj2QicldWYH6cabZKZVqE3yRJvpHWryGYytOyDFGXGLG5znDCT0WB702_yeOOwgewXLZncUmzP8zzVUgQtd9nxKfsj49jegH-8wjROpAOsR5185y2xb4jCjz5aP8GwFymYOb5pb8BI7VMdTwBSw8VP6q3-fm4uYXVa2gbbivpAUAOJ3v4qBvZz3pa0XY1_kEeKV8O8OGXIQtS0lt47L5IDF9VJrUbdzB0H98_T0xec8Y34NyooYcIbAske9DmDBnzcqxDRA_phEPCiIUMFZ3vmpX4ABzC6WQIpya28Iy0CqG0ddIMxxytilyRARUMePjJQFfVNOLC4htsvUfQnmc-XzKQlJf6t5n9CB5d0rYzkDzAmVcwUbpEF6daUdV9d_SDJv1x03jiRRjMMao3xGoin2aOfQhyA4MVy-32_Jb0Kdx6EImbh2Pn8ySAYO9TZofl1wUaDFikYNIUIOE2dkHaHca1MVndMP5NCrK5tZXxO4pCZDNpakczTDD89LSA5dzyzwBC90F6jMazIfrtSk_IcGvIRc2LhPVj1kckqP7LraKS1-NDcsLtBEvFKucz7mzEEL6OQxZ6lTn5jdI1DWXAywhsf8UgZ9UM1rTr4benetVRjmNt4r3NqR1JnxGn0hPOT9R6GO-_OEVicqPVEvRdxazaHgT3f36tmUFmdJObEBUaeKblbavYQn0iTGQVG-Xpz-xNzLQHG0t-ZBaskzwBIITXLzx8XPDBINyFZPYiP8or6jrSXEsc44xay0GnJwSORE2eiAkgjmLA1NlXgNnE9CXUIYi9swJMzNG42cSSRvaq1Zk5Uar_A4X2oLoOhWgzfc5rpQQoChSV3_fSYC0RsFIIyqHGglV_eyoYu_92M7OEa0zWQkS2aonPdPMo_vwulY6IvhKHIiQsEsNDisJeFqIoJ-DB9h2UsERu4ZjnA6Og1Mi3XvhEoEna0flElCw51zlaCI1V6gUFiC_O3hSAledzu3yIJeQYQoj5aPyLEuuZytu5JwMXp8WyWlfVtu8YgE2Zq5M2Y67r3s4rrg80p7y_qcpywas4adomTZyAeZQieUZC6w8BMG6yhPVXOeiPFzU27AP3DtyZy1ZDEYTDDO-4K7WYfFE66QHHWXofHe6LcchQFBH7Kfryd17VtaabDrtbVr-LwFETjmxjZJ7s2cNThSyCxquKrsKcdUhWZpILmzHFkjjO-63tZr5XVkddfGCu4YKQ8Xo9GFw7h3Rsf_axnHgVku8bDnRTx-EQgGPOdsUSq9mVN7NB2oOOyoiWeaUtCw00mzODpFr_Cr_S_6l98yzOuXJwzJdRN6tGnAaGJCZzifXcqWGBl6NQ2gnqSeF6vP5bZXQ2OTHCt967awWwFO2G6md8zZ96z9DX0g7RD--mVLnN-TSEa1llx10nvz9S8KwkBjXCx4golyeH-Wpjocwy7IOocnP2CVKaLiA1F_Xd2HFHo_O62trEtIQd7nN8e5G2Jgdox6-66M9XyM-Ww-m4DeiqT2TErOaUQikL13AQiRxY3cNPXVZvsHi1y391aQWgUAXdX2Uh_ELESdOZ6R6o4N_f6OQ7P16QmHsYtXBG5AxEDemreLIcMjzVZP7yG14HO3DS2AOWLi7Y0RrJFE7lqXcP_9RWOwFuqmcu725UI8j9KwfSSvvng-T8hdCvcEaTGjaJiABvhiCrAzKRlhxfeQN_91yDIZaayfcYTcDtBdxrYHKpsL5EnT-3sSooizmvDO9o08MM2joCuok3n1JxR3xVEdNIt_SanlN4MWgbTXqyscRSNd1ADSrCK4cIYNwvUNYpmfzj59xFVSnhN4iiT7N80VJ19bC89scY1-sggfmePVdhh7EWUqYDOhyWcHAyH-wqBmeJCcs27lYpcUdFx9Ew9udOYJUVoYabMicFK8NkhgSTdFSoIbVrMGjmzz71Mzymdyh8ysXTJjXEPauYFlcWRd4eD26ddWTdihuCdFXXEXdLRht6qRuEZ1nloWDwiWmTsXTUT7aRh8zQQAB_0WkpEx3XnS3Vuc8S5Fjq0Me-
+[8/23/26 12:44 PM] Ares: 1wnnOb95qfWh8N2pP3_5HQbp4aDGu5xHreoVYiCAPkNVOo3Rt8xQD3OKvFvpTVH54yI-LZAaziN1einjfkKGmHHXobVLig4a7e6enEtYXyW9TZvmIDBLC08qFcX1Ie-8CYgBjb6rS8lidl6Ldmu7CISq4K7UlLyRmzMNT-_6Ipw1ZwqMaOXaYWe4NZISGJojLZfJq4Fi2s2VTt6nzHh8Iej0npcqZXOjX7ZqYpSl-3SSLbgYqI0QuI1zjH5xMQlXp-_EVid4mSu9CZesrovCLRfArlVa6e2xD2wdRvsrZLNMHQSaG9z4fM_XljLg.c-ncnICHlFC0UPp-l0kO-y0j4AZV7dfHRRRs3YZkXk0"
+    },
+    {
+        "domain": ".podspace.ir",
+        "expirationDate": 1819011822,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "x-track-client-id",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": false,
+        "session": false,
+        "storeId": null,
+        "value": "2d5530b8-0707-4706-afbb-d4dc6f67f3ad"
+    }
+]
+
+آدرس‌های دامنه‌ مجاز
+• http://podspace.ir (http://podspace.ir/)
+• http://podspace.pod.ir (http://podspace.pod.ir/)

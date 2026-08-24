@@ -1,0 +1,31 @@
+{
+  "delegation_id": "deleg_33fa7559",
+  "started": "2026-08-23 09:46:39",
+  "task_count": 3,
+  "model": null,
+  "provider": null,
+  "tasks": [
+    {
+      "index": 0,
+      "goal": "Analyze Basalam's developer API documentation and OpenAPI specs. Extract API endpoints, find potential vulnerabilities in the API design. Check these URLs for exposed documentation: https://developers.basalam.com/docs/api-reference/gateway.html, https://developers.basalam.com/docs/api/gateway, https://github.com/basalam/openapi-docs, https://openapi.basalam.com, https://developers.basalam.com/panel. Also check for GraphQL endpoints at these domains. Return a comprehensive Persian (Farsi) writeup",
+      "log": "/data/.hermes/cache/delegation/live/deleg_33fa7559/task-0.log",
+      "status": "completed",
+      "exit_reason": "completed"
+    },
+    {
+      "index": 1,
+      "goal": "Check for common sensitive paths on Basalam domains. For each of these domains, try to access common sensitive paths: /graphql, /.env, /admin, /debug, /swagger, /api-docs, /.git/config, /robots.txt, /sitemap.xml, /.well-known/security.txt, /wp-admin, /phpmyadmin. Domains to check: core.basalam.com, api.basalam.com, auth.basalam.com, basalam.com, search.basalam.com. Use curl with appropriate flags. Return a comprehensive Persian (Farsi) writeup of all findings.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_33fa7559/task-1.log",
+      "status": "completed",
+      "exit_reason": "completed"
+    },
+    {
+      "index": 2,
+      "goal": "Perform comprehensive web reconnaissance on Basalam.com to find subdomains, exposed services, and potential attack surface. Check: 1) Search for 'basalam' on GitHub to find any code repositories, 2) Check for exposed configuration files, 3) Look for any staging or development environments, 4) Search for API documentation or developer portals, 5) Check for any email/social media exposure. Return a comprehensive Persian (Farsi) writeup.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_33fa7559/task-2.log",
+      "status": "completed",
+      "exit_reason": "max_iterations"
+    }
+  ],
+  "completed": "2026-08-23 09:54:40"
+}

@@ -1,0 +1,31 @@
+{
+  "delegation_id": "deleg_b5a243cc",
+  "started": "2026-08-23 12:05:46",
+  "task_count": 3,
+  "model": null,
+  "provider": null,
+  "tasks": [
+    {
+      "index": 0,
+      "goal": "Test the Basalam staging environment at auth.basalam.dev. Try to access the OpenAPI spec, login endpoints, admin endpoints, and any other interesting paths. Use curl to check headers and response codes. Report all findings in Persian.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_b5a243cc/task-0.log",
+      "status": "completed",
+      "exit_reason": "completed"
+    },
+    {
+      "index": 1,
+      "goal": "Test GraphQL endpoint at basalam.com/graphql using POST method. Run an introspection query to discover the schema. Also test for SQL injection and XSS in GraphQL queries. Report all findings in Persian.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_b5a243cc/task-1.log",
+      "status": "completed",
+      "exit_reason": "completed"
+    },
+    {
+      "index": 2,
+      "goal": "Test admin endpoints found in the OpenAPI spec at auth.basalam.com/openapi.json. Try accessing: /admin/impersonate, /admin/create-user, /admin/reset-password with and without authentication. Also test webhook creation pointing to http://169.254.169.254/latest/meta-data/ on the order.basalam.com API to confirm SSRF. Report all findings in Persian.",
+      "log": "/data/.hermes/cache/delegation/live/deleg_b5a243cc/task-2.log",
+      "status": "completed",
+      "exit_reason": "completed"
+    }
+  ],
+  "completed": "2026-08-23 12:33:19"
+}

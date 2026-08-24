@@ -1,0 +1,879 @@
+2026-08-23 07:23:49,832 WARNING hermes.security_audit: Security posture audit found 1 issue(s) — review your deployment:
+2026-08-23 07:23:49,833 WARNING hermes.security_audit:   [security 1/1] Running as ROOT. The agent's terminal/file tools execute with full root privileges — a single prompt-injection or exposed endpoint is a full host compromise. Run Hermes as an unprivileged user (or in a sandboxed terminal backend / container with a non-root user).
+2026-08-23 07:23:51,248 WARNING hermes_state: state.db (async_delegation): linked SQLite 3.46.1 is vulnerable to the WAL-reset corruption bug (https://sqlite.org/wal.html#walresetbug) — using journal_mode=DELETE instead of enabling WAL. Upgrade to SQLite 3.51.3+ (or backports 3.50.7 / 3.44.6); Hermes-managed installs can repair the embedded runtime with `hermes update`. See `hermes doctor`. This warning fires once per process per database.
+2026-08-23 07:23:51,270 WARNING hermes_state: state.db: linked SQLite 3.46.1 is vulnerable to the WAL-reset corruption bug (https://sqlite.org/wal.html#walresetbug) — using journal_mode=DELETE instead of enabling WAL. Upgrade to SQLite 3.51.3+ (or backports 3.50.7 / 3.44.6); Hermes-managed installs can repair the embedded runtime with `hermes update`. See `hermes doctor`. This warning fires once per process per database.
+2026-08-23 07:23:51,741 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-23 07:23:51,842 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-08-23 07:24:03,344 WARNING hermes_state: state.db (delivery_ledger): linked SQLite 3.46.1 is vulnerable to the WAL-reset corruption bug (https://sqlite.org/wal.html#walresetbug) — using journal_mode=DELETE instead of enabling WAL. Upgrade to SQLite 3.51.3+ (or backports 3.50.7 / 3.44.6); Hermes-managed installs can repair the embedded runtime with `hermes update`. See `hermes doctor`. This warning fires once per process per database.
+2026-08-23 07:24:03,381 WARNING hermes_state: cron/executions.db: linked SQLite 3.46.1 is vulnerable to the WAL-reset corruption bug (https://sqlite.org/wal.html#walresetbug) — using journal_mode=DELETE instead of enabling WAL. Upgrade to SQLite 3.51.3+ (or backports 3.50.7 / 3.44.6); Hermes-managed installs can repair the embedded runtime with `hermes update`. See `hermes doctor`. This warning fires once per process per database.
+2026-08-23 07:24:08,386 WARNING hermes_state: kanban.db (kanban.db): linked SQLite 3.46.1 is vulnerable to the WAL-reset corruption bug (https://sqlite.org/wal.html#walresetbug) — using journal_mode=DELETE instead of enabling WAL. Upgrade to SQLite 3.51.3+ (or backports 3.50.7 / 3.44.6); Hermes-managed installs can repair the embedded runtime with `hermes update`. See `hermes doctor`. This warning fires once per process per database.
+2026-08-23 07:24:35,976 WARNING agent.model_metadata: Could not determine context length for model 'free' (base_url=https://9router-production-e31c.up.railway.app/v1) — falling back to 256,000 tokens. Set model.context_length in config.yaml to override.
+2026-08-23 07:24:53,682 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:54,039 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:54,376 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:54,680 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:55,013 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:55,359 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:55,360 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:55,670 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:55,996 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:56,342 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:56,653 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:56,955 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:57,285 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:57,317 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:57,320 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:57,320 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:57,321 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:57,999 WARNING agent.auxiliary_client: Auxiliary client: PAID lane engaged for auxiliary task — OpenRouter fallback model 'google/gemini-3.6-flash' is not a :free SKU and may incur real spend. Set auxiliary.free_only: true to restrict auxiliary fallbacks to free models, or auxiliary.openrouter_model to a :free model.
+2026-08-23 07:24:58,000 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 07:25:58.
+2026-08-23 07:24:58,003 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 07:24:58,003 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 07:25:58.
+2026-08-23 07:24:58,003 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-08-23 07:24:58,003 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 07:25:58.
+2026-08-23 07:24:58,004 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 07:24:58,004 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 07:25:58.
+2026-08-23 07:24:58,005 WARNING agent.auxiliary_client: resolve_provider_client: nous requested but Nous Portal not configured (run: hermes auth)
+2026-08-23 07:24:58,005 WARNING tools.registry: check_fn check_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:24:58,528 WARNING agent.auxiliary_client: OPENAI_BASE_URL is set (https://9router-production-e31c.up.railway.app/v1) but model.provider is 'openai-api'. Auxiliary clients may route to the wrong endpoint. Run: hermes model to reconfigure, or remove OPENAI_BASE_URL from ~/.hermes/.env
+2026-08-23 07:25:11,945 WARNING [20260823_072435_ea5ca78e] agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: line 4: hermes: command not found", "exit_code": 127, "error": null, "hint": "`hermes` is not installed or not on PATH. Verify with `which hermes`; install it or use an abso
+2026-08-23 07:27:21,875 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:22,276 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:22,651 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:22,988 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:23,308 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:23,640 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:23,641 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:23,970 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:24,280 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:24,640 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:24,989 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:25,313 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:25,648 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:25,649 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:25,651 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:25,652 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:25,653 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:27:38,772 WARNING [20260823_072435_ea5ca78e] agent.conversation_loop: API call failed (attempt 1/3) error_type=ReadError thread=bg-review:140110642779840 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=[Errno 32] Broken pipe
+2026-08-23 07:27:38,772 WARNING [20260823_072435_ea5ca78e] agent.conversation_loop: Retrying API call in 2.547665793706855s (attempt 1/3) thread=bg-review:140110642779840 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=[Errno 32] Broken pipe
+2026-08-23 07:27:39,053 WARNING agent.relay_runtime: Hermes Relay drained 1 orphaned scope(s) before closing ScopeHandle(name='hermes.session', uuid='01a02d82-217d-7652-833b-cfd290e9a8ab')
+2026-08-23 07:27:41,415 WARNING run_agent: Detected closed shared OpenAI client; recreated before use (codex_stream_request) thread=Thread-39 (<lambda>):140110935877312 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free
+2026-08-23 07:28:02,200 WARNING [20260823_072435_ea5ca78e] agent.relay_runtime: Hermes Relay turn finalization failed: turn scope close failed: Hermes Relay session is closing
+2026-08-23 07:28:24,845 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:25,159 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:25,461 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:25,752 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:26,074 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:26,403 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:26,404 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:26,692 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:27,026 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:27,343 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:27,682 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:27,999 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:28,296 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:28,297 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:28,300 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:28,300 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:28,301 WARNING [20260823_072435_ea5ca78e] tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 07:28:38,550 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool web_extract returned error (1.13s): {
+  "results": [
+    {
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/blob/main/USAGE.md",
+      "title": "",
+      "content": "",
+      "error": "Keyless Firecrawl extract failed: C
+2026-08-23 07:29:29,810 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:29:56,874 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (2/5) — previous session still held open on Telegram's servers. Waiting 30s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:31:34,951 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool skill_manage returned error (0.01s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-08-23 07:31:34,964 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool skill_manage returned error (0.01s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-08-23 07:31:34,975 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool skill_manage returned error (0.01s): {"error": "file_content is required for 'write_file'.", "success": false}
+
+[Tool loop warning: same_tool_failure_warning; count=3; skill_manage has failed 3 times this turn. This looks like a loop. Do
+2026-08-23 07:36:24,091 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool skill_manage returned error (0.01s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-08-23 07:36:24,102 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool skill_manage returned error (0.01s): {"error": "file_content is required for 'write_file'.", "success": false}
+2026-08-23 07:36:24,114 WARNING [20260823_072739_9994ebf4] agent.tool_executor: Tool skill_manage returned error (0.01s): {"error": "file_content is required for 'write_file'.", "success": false}
+
+[Tool loop warning: same_tool_failure_warning; count=3; skill_manage has failed 3 times this turn. This looks like a loop. Do
+2026-08-23 07:42:50,293 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:52:36,074 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:56:35,199 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:56:56,667 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 1/2, retrying in 2.5s): send_path_degraded
+2026-08-23 07:56:59,175 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 2/2, retrying in 4.8s): send_path_degraded
+2026-08-23 07:57:03,952 ERROR gateway.platforms.base: [Telegram] Failed to deliver response after 2 retries: send_path_degraded
+2026-08-23 08:02:34,531 WARNING [20260823_075340_b3475c67] agent.tool_executor: Tool terminal returned error (14.78s): {"output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/local/lib/python3.11/json/__init__.py\", line 293, in load\n    return loads(fp.read(),\n       
+2026-08-23 08:03:43,061 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:07:51,808 WARNING [20260823_075340_b3475c67] agent.tool_executor: Tool web_extract returned error (30.10s): {
+  "results": [
+    {
+      "url": "https://tridentstack.com/cve/api",
+      "title": "",
+      "content": "",
+      "error": "Keyless Parallel extract failed: request failed: HTTPSConnectionPool(hos
+2026-08-23 08:08:20,543 WARNING [20260823_075340_b3475c67] agent.tool_executor: Tool terminal returned error (18.12s): {"output": "=== 1. GET single CVE ===\nKeys: ['cveId', 'description', 'severity', 'cvss', 'epss', 'kev', 'cwes', 'remediation', 'references', 'publishedAt', 'modifiedAt', 'dataSources', '_links']\n\n=
+2026-08-23 08:09:42,798 WARNING [20260823_075340_b3475c67] agent.tool_executor: Tool skill_manage returned error (0.01s): {"success": false, "error": "Skill name is required."}
+2026-08-23 08:10:06,922 WARNING [20260823_075340_b3475c67] agent.tool_executor: Tool skill_manage returned error (0.01s): {"success": false, "error": "Description is 73 chars — new skills must fit the 60-char system-prompt budget (one sentence, trigger first, ends with a period). The skill index truncates longer descript
+2026-08-23 08:11:46,664 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:17:05,462 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 08:18:05.
+2026-08-23 08:17:05,464 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 08:17:05,464 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 08:18:05.
+2026-08-23 08:17:05,533 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 08:17:05,533 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 08:17:26,133 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool terminal returned error (56.26s): {"output": "📦 در حال کلون کردن ریپو...\nCloning into '/data/workspace/backups/backup2'...\n📂 در حال کپی فایل‌ها...\nsending incremental file list\ncreated directory /data/workspace/backups/backup2/dat
+2026-08-23 08:17:57,452 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:57,797 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:58,150 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:58,485 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:58,790 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:59,098 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:59,099 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:59,400 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:17:59,700 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:00,049 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:00,372 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:00,721 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:01,081 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:01,082 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:01,084 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:01,084 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 08:18:01,085 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 08:19:15,555 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:19:24,463 WARNING tools.environments.local: LocalEnvironment cwd '/data/workspace/backups/backup2' is missing on disk; falling back to '/data/workspace/backups' so terminal commands keep working.
+2026-08-23 08:19:27,967 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 08:19:30,720 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool terminal returned error (0.07s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 08:19:39,817 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool terminal returned error (0.07s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 08:19:42,757 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 08:19:51,085 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool terminal returned error (5.97s): {"output": "📦 در حال کلون کردن ریپو...\nCloning into '/data/workspace/backups/backup2'...\n📂 در حال کپی فایل‌ها...\nsending incremental file list\ncreated directory /data/workspace/backups/backup2/dat
+2026-08-23 08:24:21,794 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool cronjob returned error (0.00s): {"error": "Script path must be relative to ~/.hermes/scripts/. Got absolute or home-relative path: '/data/workspace/backup.sh'. Place scripts in ~/.hermes/scripts/ and use just the filename.", "succes
+2026-08-23 08:25:12,534 WARNING [20260823_081130_de3507e8] agent.tool_executor: Tool cronjob returned error (0.00s): {"error": "Script path must be relative to ~/.hermes/scripts/. Got absolute or home-relative path: '/data/.hermes/scripts/backup.sh'. Place scripts in ~/.hermes/scripts/ and use just the filename.", "
+2026-08-23 08:25:50,128 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=356497 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 08:26:53,314 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:53,655 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:53,979 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:54,336 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:54,733 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:55,078 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:55,079 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:55,422 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:55,805 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:56,176 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:56,519 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:56,895 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:57,266 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:57,267 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:57,270 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:57,270 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 08:26:57,271 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 08:33:14,542 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:36:59,530 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:37:54,502 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:39:18,155 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:43:47,779 WARNING [20260823_084317_4fb30a12] agent.tool_executor: Tool web_extract returned error (0.30s): {
+  "results": [
+    {
+      "url": "http://63.142.180.157/13_06_04/index_en.jsp",
+      "title": "",
+      "content": "",
+      "error": "Keyless Firecrawl extract failed: Client error '403 Forbidden
+2026-08-23 08:44:06,024 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 08:45:06.
+2026-08-23 08:44:06,025 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 08:44:06,026 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 08:45:06.
+2026-08-23 08:44:06,102 WARNING agent.auxiliary_client: Auxiliary title_generation: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 08:44:06,102 WARNING agent.auxiliary_client: Auxiliary title_generation: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 08:44:06,102 WARNING agent.title_generator: Title generation failed: Connection error.
+2026-08-23 08:48:53,414 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:55:57,245 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:58:16,823 WARNING [20260823_085711_cf1cee54] agent.tool_executor: Tool web_extract returned error (30.14s): {
+  "results": [
+    {
+      "url": "https://www.netafraz.com/",
+      "title": "",
+      "content": "",
+      "error": "Keyless Parallel extract failed: request failed: HTTPSConnectionPool(host='sear
+2026-08-23 08:58:16,833 WARNING [20260823_085711_cf1cee54] agent.tool_executor: Tool web_search returned error (1.15s): {
+  "success": false,
+  "error": "Keyless Exa search failed: Unrecognized MCP response shape. Set EXA_API_KEY (https://exa.ai) or another web backend via `hermes tools` for reliable service."
+}
+2026-08-23 08:58:17,766 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=98290 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 09:00:54,356 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:06:12,847 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:07:31,075 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:09:00,575 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (0.16s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:09:04,389 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 09:10:04.
+2026-08-23 09:09:04,390 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 09:09:04,390 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 09:10:04.
+2026-08-23 09:09:04,468 WARNING agent.auxiliary_client: Auxiliary title_generation: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 09:09:04,469 WARNING agent.auxiliary_client: Auxiliary title_generation: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 09:09:04,469 WARNING agent.title_generator: Title generation failed: Connection error.
+2026-08-23 09:09:11,217 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (10.62s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (Security scan — [HIGH] Plain HTTP
+2026-08-23 09:09:33,255 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (22.03s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (Security scan — [HIGH] Plain HTTP
+2026-08-23 09:09:33,428 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (0.15s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:09:33,514 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:09:37,945 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:11:23,257 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (35.40s): {"output": "[Command timed out after 15s]", "exit_code": 124, "error": null, "approval": "Command was flagged (Security scan — [HIGH] Plain HTTP URL in execution context: URL 'http://podspace.pod.ir/'
+2026-08-23 09:11:23,331 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 4: dig: command not found\n===\n/usr/bin/bash: line 4: dig: command not found", "exit_code": 127, "error": null, "hint": "`dig` is not installed or not on PATH. Verify 
+2026-08-23 09:11:30,289 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (0.07s): {"output": "/usr/bin/bash: line 4: host: command not found\n===\n/usr/bin/bash: line 4: host: command not found", "exit_code": 127, "error": null, "hint": "`host` is not installed or not on PATH. Veri
+2026-08-23 09:11:44,048 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool terminal returned error (13.75s): {"output": "[Command interrupted]", "exit_code": 130, "error": null}
+
+[Tool loop warning: same_tool_failure_warning; count=4; terminal has failed 4 times this turn. This looks like a loop. Do not swit
+2026-08-23 09:14:48,659 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=118775 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 09:19:22,737 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:20:57,379 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:22:43,798 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:25:58,146 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 09:26:58.
+2026-08-23 09:25:58,148 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 09:25:58,148 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 09:26:58.
+2026-08-23 09:25:58,244 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 09:25:58,244 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 09:32:08,482 WARNING tools.code_execution_tool: execute_code timed out after 300.0s (limit 300s) with 19 tool calls
+2026-08-23 09:32:08,485 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool execute_code returned error (403.36s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 19, "duration_seconds": 300.0, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 09:34:53,705 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:38:20,653 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:40:04,815 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:05,167 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:05,534 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:05,903 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:06,276 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:06,652 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:06,653 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:07,031 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:07,393 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:07,725 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,155 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,483 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,818 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,819 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,821 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,821 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:08,822 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 09:40:40,481 WARNING [20260823_085817_cb368c83] agent.conversation_loop: API call failed (attempt 1/3) error_type=ReadError thread=bg-review:140110401103552 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=[Errno 32] Broken pipe
+2026-08-23 09:40:40,482 WARNING [20260823_085817_cb368c83] agent.conversation_loop: Retrying API call in 2.7912171166785145s (attempt 1/3) thread=bg-review:140110401103552 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=[Errno 32] Broken pipe
+2026-08-23 09:40:40,532 WARNING agent.relay_runtime: Hermes Relay drained 1 orphaned scope(s) before closing ScopeHandle(name='hermes.session', uuid='01a02de0-edb2-7d12-a3e5-9be996da9e17')
+2026-08-23 09:40:43,296 WARNING run_agent: Detected closed shared OpenAI client; recreated before use (codex_stream_request) thread=Thread-787 (<lambda>):140109953365696 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free
+2026-08-23 09:41:11,319 WARNING [20260823_085817_cb368c83] agent.tool_executor: Tool skill_manage returned error (0.00s): {"success": false, "error": "Refusing background curator write_file for skill 'bug-bounty-methodology': the skill is not curator-managed (created_by=None). User-owned skills are off-limits to autonomo
+2026-08-23 09:41:24,445 WARNING [20260823_085817_cb368c83] agent.relay_runtime: Hermes Relay turn finalization failed: turn scope close failed: Hermes Relay session is closing
+2026-08-23 09:44:08,630 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool web_extract returned error (10.10s): {
+  "results": [
+    {
+      "url": "https://www.ravro.ir/fa/target/basalam/target-6f797430-6935-4038-b34d-457633327767",
+      "title": "",
+      "content": "",
+      "error": "Keyless Exa extract fa
+2026-08-23 09:44:35,059 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:35,626 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:35,974 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:36,320 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:36,657 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:37,011 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:37,013 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:37,331 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:37,681 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:38,044 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:38,378 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:38,699 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:39,017 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:39,017 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:39,019 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 09:44:50,570 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool web_search returned error (0.32s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 09:44:55,564 WARNING [20260823_094439_32c758] agent.tool_executor: Tool web_search returned error (1.19s): {
+  "success": false,
+  "error": "Keyless Exa search failed: Unrecognized MCP response shape. Set EXA_API_KEY (https://exa.ai) or another web backend via `hermes tools` for reliable service."
+}
+2026-08-23 09:44:59,903 WARNING [20260823_094439_f2f481] agent.tool_executor: Tool terminal returned error (0.13s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:45:04,312 WARNING [20260823_094439_32c758] agent.tool_executor: Tool web_search returned error (0.40s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 09:45:04,319 WARNING [20260823_094439_32c758] agent.tool_executor: Tool web_extract returned error (0.87s): {
+  "results": [
+    {
+      "url": "https://developers.basalam.com/docs/quick-start",
+      "title": "",
+      "content": "",
+      "error": "Keyless Exa extract failed: Unrecognized MCP response sha
+2026-08-23 09:45:04,430 WARNING [20260823_094439_32c758] agent.tool_executor: Tool terminal returned error (0.10s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:45:05,902 WARNING [20260823_094439_f2f481] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:45:07,365 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (16.75s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (Security scan — [HIGH] Pipe to in
+2026-08-23 09:45:16,833 WARNING [20260823_094439_32c758] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:45:16,969 WARNING [20260823_094439_32c758] agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:45:21,876 WARNING [20260823_094439_32c758] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:46:47,646 WARNING [20260823_094639_f257cc] agent.tool_executor: Tool web_extract returned error (3.75s): {
+  "results": [
+    {
+      "url": "https://developers.basalam.com/docs/api/gateway",
+      "title": "SalamAPI Docs | Gateway",
+      "content": "![Basalam Logo](/docs/_next/static/media/logo-type.0d
+2026-08-23 09:46:49,846 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_search returned error (0.31s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 09:46:54,544 WARNING [20260823_094639_1ce351] agent.tool_executor: Tool terminal returned error (0.07s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:46:55,130 WARNING tools.approval: Hardline block: command parser limit or malformed executable payload (command: curl -s --max-time 10 https://basalam.com/ 2>/dev/null | grep -oP "src="[^"]+"" | head -20)
+2026-08-23 09:46:55,134 WARNING tools.approval: Hardline block: command parser limit or malformed executable payload (command: curl -s --max-time 10 https://wallet.basalam.com/ 2>/dev/null | grep -oP "(src|href)="[^"]+"" | head -20)
+2026-08-23 09:46:56,823 WARNING [20260823_094639_1ce351] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:46:58,631 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_search returned error (0.34s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 09:46:58,655 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_search returned error (1.29s): {
+  "success": false,
+  "error": "Keyless Exa search failed: Unrecognized MCP response shape. Set EXA_API_KEY (https://exa.ai) or another web backend via `hermes tools` for reliable service."
+}
+2026-08-23 09:46:59,341 WARNING [20260823_094639_1ce351] agent.tool_executor: Tool terminal returned error (0.07s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:46:59,907 WARNING [20260823_094639_f257cc] agent.tool_executor: Tool web_search returned error (1.24s): {
+  "success": false,
+  "error": "Keyless Exa search failed: Unrecognized MCP response shape. Set EXA_API_KEY (https://exa.ai) or another web backend via `hermes tools` for reliable service."
+}
+2026-08-23 09:47:03,901 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_search returned error (0.31s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 09:47:09,175 WARNING [20260823_094639_f257cc] agent.tool_executor: Tool web_extract returned error (1.36s): {
+  "results": [
+    {
+      "url": "https://developers.basalam.com/docs/api/gateway",
+      "title": "SalamAPI Docs | Gateway",
+      "content": "![Basalam Logo](/docs/_next/static/media/logo-type.0d
+2026-08-23 09:47:12,304 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_search returned error (0.32s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 09:47:12,309 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_extract returned error (1.33s): {
+  "results": [
+    {
+      "url": "https://developers.basalam.com/docs/api-reference/gateway.html",
+      "title": "",
+      "content": "",
+      "error": "Keyless Exa extract failed: Error fetching
+2026-08-23 09:47:17,104 WARNING [20260823_094639_f257cc] agent.tool_executor: Tool web_extract returned error (0.87s): {
+  "results": [
+    {
+      "url": "https://pypi.org/project/basalam-sdk",
+      "title": "",
+      "content": "",
+      "error": "Keyless Firecrawl extract failed: Client error '403 Forbidden' for u
+2026-08-23 09:47:18,798 WARNING tools.approval: Hardline block: command parser limit or malformed executable payload (command: curl -s --max-time 10 https://basalam.com/ 2>/dev/null | grep -oP "(/_next/|data-next|charsou|charsou-assets|buildId|__NEXT_DATA__)[^"]*")
+2026-08-23 09:47:19,839 WARNING [20260823_094639_0310e9] agent.tool_executor: Tool web_search returned error (1.27s): {
+  "success": false,
+  "error": "Keyless Exa search failed: Unrecognized MCP response shape. Set EXA_API_KEY (https://exa.ai) or another web backend via `hermes tools` for reliable service."
+}
+2026-08-23 09:47:20,558 WARNING tools.approval: Hardline block: command parser limit or malformed executable payload (command: curl -s --max-time 10 https://wallet.basalam.com/ 2>/dev/null | grep -oP "src="[^"]+\.js"")
+2026-08-23 09:47:38,254 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (17.58s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (script execution via -e/-c flag) 
+2026-08-23 09:47:38,421 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (0.16s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:47:57,920 WARNING tools.approval: Hardline block: command parser limit or malformed executable payload (command: curl -s --max-time 10 https://basalam.com/ 2>/dev/null | grep -oP "(src|href)="(/charsou[^"]+)"" | sort -u | head -30)
+2026-08-23 09:48:11,940 WARNING [20260823_094639_f257cc] agent.tool_executor: Tool terminal returned error (0.10s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:48:15,019 WARNING [20260823_094639_f257cc] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:48:24,485 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (22.25s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (script execution via -e/-c flag) 
+2026-08-23 09:48:24,620 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:48:24,756 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (0.13s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:48:27,786 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 09:52:42,961 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:58:08,433 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=311469 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 10:05:14,088 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:07:50,151 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=414627 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 10:14:36,902 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 1,027/1,375 chars. Adding this entry (495 chars) would exceed the limit. Consolidate now: use 'replace' to merge overlapping entries into shorter ones or 'remove
+2026-08-23 10:14:53,700 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=492493 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 10:15:41,572 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:24:22,541 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool skill_manage returned error (0.00s): {"success": false, "error": "Refusing background curator patch for skill 'bug-bounty-methodology': the skill is not curator-managed (created_by=None). User-owned skills are off-limits to autonomous cu
+2026-08-23 10:24:49,632 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:31:58,928 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:34:35,028 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:35:53,306 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:44:49,233 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:49:21,914 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=625077 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 10:49:58,905 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:50:26,483 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=638326 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 10:54:49,243 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:59:38,105 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=679128 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 11:01:33,378 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:03:38,739 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:04:50,811 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=713414 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 11:05:16,525 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=714092 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 11:20:08,948 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:24:54,616 WARNING agent.model_metadata: Could not determine context length for model 'free' (base_url=https://9router-production-e31c.up.railway.app/v1/) — falling back to 256,000 tokens. Set model.context_length in config.yaml to override.
+2026-08-23 11:28:20,669 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=398224 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 11:33:31,135 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:34:06,679 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:40:22,784 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:43:26,719 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=548179 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 11:44:07,062 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:50:25,051 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:53:20,605 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:59:02,225 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=669992 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 12:05:48,252 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:06:26,715 WARNING [20260823_120546_d6b5b5] agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 12:06:39,706 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:07:02,266 WARNING [20260823_120546_1b6c3e] agent.tool_executor: Tool terminal returned error (13.99s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (Security scan — [MEDIUM] Lookalik
+2026-08-23 12:07:20,672 WARNING [20260823_120546_d6b5b5] agent.tool_executor: Tool execute_code returned error (0.36s): {"status": "error", "output": "=== Response Headers for POST /graphql ===\nHTTP/2 405 \ndate: Sun, 23 Aug 2026 12:07:20 GMT\ncontent-type: text/html; charset=utf-8\ncache-control: no-store\ncontent-le
+2026-08-23 12:07:24,906 WARNING [20260823_120546_1b6c3e] agent.tool_executor: Tool terminal returned error (17.67s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (Security scan — [MEDIUM] Lookalik
+2026-08-23 12:07:30,003 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (27.17s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (script execution via -e/-c flag) 
+2026-08-23 12:07:37,034 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 12:07:50,029 WARNING [20260823_120546_1b6c3e] agent.tool_executor: Tool terminal returned error (21.53s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (Security scan — [MEDIUM] Lookalik
+2026-08-23 12:07:53,225 WARNING [20260823_120546_1b6c3e] agent.tool_executor: Tool terminal returned error (0.05s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 12:08:05,313 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (0.11s): {"output": "Traceback (most recent call last):\n  File \"/tmp/test_admin.py\", line 2, in <module>\n    import requests\nModuleNotFoundError: No module named 'requests'", "exit_code": 1, "error": null
+2026-08-23 12:08:07,222 WARNING [20260823_120546_d6b5b5] agent.tool_executor: Tool web_search returned error (0.32s): {
+  "success": false,
+  "error": "Keyless Firecrawl search failed: Client error '403 Forbidden' for url 'https://api.firecrawl.dev/v2/search'\nFor more information check: https://developer.mozilla.org
+2026-08-23 12:08:37,909 WARNING [20260823_120546_d6b5b5] agent.tool_executor: Tool web_extract returned error (0.37s): {
+  "results": [
+    {
+      "url": "https://basalam.com/developer",
+      "title": "",
+      "content": "",
+      "error": "Keyless Exa extract failed: Unrecognized MCP response shape. Set EXA_API_KE
+2026-08-23 12:08:37,975 WARNING [20260823_120546_d6b5b5] agent.tool_executor: Tool execute_code returned error (0.06s): {"status": "error", "output": "\n--- stderr ---\n  File \"/tmp/hermes_sandbox_huvkpvs4/script.py\", line 43\n    print(f\"Malformed JSON: {[l for l in out.split('\\n') if 'HTTP_CODE:' in l]} Body: {ou
+2026-08-23 12:09:01,369 WARNING [20260823_120546_1b6c3e] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 12:09:11,993 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 12:10:11.
+2026-08-23 12:09:11,995 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 12:09:11,995 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 12:10:11.
+2026-08-23 12:09:12,101 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 12:09:12,101 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 12:10:42,156 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (123.42s): {"output": "=== Decoding Persian messages ===\ncreate-user no-auth: ca\ncreate-user no-auth 403: Ø´ÙØ§ Ø¯Ø³ØªØ±Ø³Û ÙØ§Ø²Ù Ø¨Ø±Ø§Û Ø§ÛØ¬Ø§Ø¯ Ú©Ø§Ø±Ø¨Ø± Ø±Ø§ ÙØ¯Ø§Ø±ÛØ¯!\nreset-password no-auth 401: ÙØ·
+2026-08-23 12:12:00,048 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (52.04s): {"output": "", "exit_code": -1, "error": "BLOCKED: Command denied by user. The user has NOT consented to this action. Do NOT retry this command, do NOT rephrase it, and do NOT attempt the same outcome
+2026-08-23 12:12:00,051 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:00,409 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:00,769 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:01,078 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:01,406 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:01,714 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:01,715 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:02,040 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:02,395 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:02,772 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,213 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,558 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,875 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,876 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,878 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,879 WARNING tools.registry: check_fn _check_kanban_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:03,879 WARNING tools.registry: check_fn _check_kanban_orchestrator_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 12:12:07,215 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (0.08s): {"output": "شما دسترسی لازم برای ایجاد کاربر را ندارید!\n/usr/bin/bash: eval: line 7: syntax error near unexpected token `'\\u0644\\u0637\\u0641\\u0627 \\u0644\\u0627\\u06af\\u06cc\\u0646 \\u06a9\\u06
+2026-08-23 12:12:16,035 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Blocked: content contains invisible unicode character U+200C (possible injection)."}
+2026-08-23 12:12:16,683 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=760272 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 12:13:14,464 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (54.19s): {"output": "[Command timed out after 30s]", "exit_code": 124, "error": null, "approval": "Command was flagged (script execution via heredoc) and auto-approved by smart approval.", "hint": "Exit 124: t
+2026-08-23 12:14:53,832 WARNING [20260823_120546_1b6c3e] agent.tool_executor: Tool execute_code returned error (10.18s): {"status": "error", "output": "=== LOGIN ENDPOINT TEST ===\n\n--- stderr ---\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 1348, in do_open\n    h.r
+2026-08-23 12:18:39,045 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (300.30s): {"output": "=== order.basalam.com/openapi.json ===\nError: HTTPSConnectionPool(host='order.basalam.com', port=443): Max retries exceeded with url: /openapi.json (Caused by ConnectTimeoutError(<HTTPSCo
+2026-08-23 12:21:12,808 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 12:21:12,872 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool terminal returned error (0.06s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 12:22:17,235 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=842096 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 12:23:16,106 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:26:47,639 WARNING [20260823_120546_2e5605] agent.tool_executor: sequential tool terminal timed out after 420.0s
+2026-08-23 12:31:28,842 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (58.45s): {"output": "HTTP_CODE:000", "exit_code": 28, "error": null, "approval": "Command was flagged (Security scan — [MEDIUM] Schemeless URL in sink context: URL without explicit scheme passed to a command t
+2026-08-23 12:32:14,859 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool terminal returned error (30.36s): {"output": "HTTP:000", "exit_code": 28, "error": null, "exit_code_meaning": "Operation timed out"}
+2026-08-23 12:32:21,046 WARNING [20260823_120546_2e5605] agent.tool_executor: Tool web_extract returned error (1.49s): {
+  "results": [
+    {
+      "url": "https://auth.basalam.com/admin/impersonate",
+      "title": "",
+      "content": "",
+      "error": "Keyless Firecrawl extract failed: Client error '403 Forbidden'
+2026-08-23 12:36:51,475 WARNING tools.code_execution_tool: execute_code timed out after 300.01s (limit 300s) with 0 tool calls
+2026-08-23 12:36:51,478 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool execute_code returned error (300.06s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 0, "duration_seconds": 300.01, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 12:45:32,502 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:45:51,243 WARNING tools.code_execution_tool: execute_code timed out after 300.01s (limit 300s) with 0 tool calls
+2026-08-23 12:45:51,246 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool execute_code returned error (300.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 0, "duration_seconds": 300.01, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 12:46:40,984 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:47:22,730 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=493584 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 12:52:30,068 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:56:50,440 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "Memory at 1,192/1,375 chars. Adding this entry (825 chars) would exceed the limit. Consolidate now: use 'replace' to merge overlapping entries into shorter ones or 'remove
+2026-08-23 12:56:59,639 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool memory returned error (0.00s): {"error": "content is required for 'replace' action.", "success": false}
+2026-08-23 12:57:11,977 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool memory returned error (0.00s): {"success": false, "error": "No entry matched 'Preferences: always reply in Farsi (Persian). Complete tasks fully before stopping. Provide detailed writeups after completing work. Use Markdown formatt
+2026-08-23 12:57:40,248 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool skill_manage returned error (0.00s): {"success": false, "error": "Refusing background curator patch for skill 'bug-bounty-methodology': the skill is not curator-managed (created_by=None). User-owned skills are off-limits to autonomous cu
+2026-08-23 12:57:58,455 WARNING [20260823_094040_21c4d0d0] agent.tool_executor: Tool skill_manage returned error (0.00s): {"success": false, "error": "Refusing background curator write_file for skill 'bug-bounty-methodology': the skill is not curator-managed (created_by=None). User-owned skills are off-limits to autonomo
+2026-08-23 12:59:14,303 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:07:22,682 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:10:27,614 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:12:29,815 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:15:44,214 WARNING agent.relay_runtime: Hermes Relay drained 1 orphaned scope(s) before closing ScopeHandle(name='hermes.session', uuid='01a02e01-488a-7a72-bca3-f28734204730')
+2026-08-23 13:15:46,664 WARNING [20260823_094040_21c4d0d0] agent.relay_runtime: Hermes Relay turn finalization failed: turn scope close failed: Hermes Relay session is closing
+2026-08-23 13:18:08,805 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:21:12,560 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:27:58,003 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:29:32,802 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:32:00,630 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.12s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 13:32:04,056 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "/usr/bin/curl", "exit_code": 1, "error": null}
+2026-08-23 13:32:07,372 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 13:33:07.
+2026-08-23 13:32:07,374 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 13:32:07,374 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 13:33:07.
+2026-08-23 13:32:07,459 WARNING agent.auxiliary_client: Auxiliary title_generation: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 13:32:07,460 WARNING agent.auxiliary_client: Auxiliary title_generation: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 13:32:07,460 WARNING agent.title_generator: Title generation failed: Connection error.
+2026-08-23 13:32:48,509 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.08s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 13:33:07,455 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (15.83s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (shell command via -c/-lc flag) an
+2026-08-23 13:33:11,245 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.05s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 13:33:15,262 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool read_file returned error (0.04s): {"content": "", "total_lines": 0, "file_size": 0, "truncated": false, "is_binary": false, "is_image": false, "error": "File not found: /root/.bash_profile"}
+2026-08-23 13:33:30,068 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.08s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 13:34:05,538 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (8.16s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "approval": "Command was flagged (shell command via -c/-lc flag) an
+2026-08-23 13:34:14,346 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.05s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 13:35:44,154 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=151505 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 13:37:21,958 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:42:35,234 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (0.38s): {"status": "error", "output": "\n--- stderr ---\nTraceback (most recent call last):\n  File \"/tmp/hermes_sandbox_te_x5w8i/script.py\", line 21, in <module>\n    if \"timed out\" in r.get(\"error\", \
+2026-08-23 13:44:57,495 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:51:22,455 WARNING tools.approval: Hardline block: command parser limit or malformed executable payload (command: grep -oP 'https?://[^"'\s]+' /tmp/main.js 2>/dev/null | sort -u | head -40)
+2026-08-23 13:56:25,150 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:57:39,042 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=247387 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 14:01:17,838 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:02:17.
+2026-08-23 14:01:17,840 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 14:01:17,840 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:02:17.
+2026-08-23 14:01:17,922 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 14:01:17,922 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 14:05:01,732 WARNING tools.code_execution_tool: execute_code timed out after 300.0s (limit 300s) with 19 tool calls
+2026-08-23 14:05:01,735 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (303.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 19, "duration_seconds": 300.0, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 14:12:52,116 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:13:52.
+2026-08-23 14:12:52,117 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 14:12:52,117 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:13:52.
+2026-08-23 14:12:52,189 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 14:12:52,189 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 14:13:17,417 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:15:45,112 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:16:49,468 WARNING tools.code_execution_tool: execute_code timed out after 300.0s (limit 300s) with 8 tool calls
+2026-08-23 14:16:49,471 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (303.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 8, "duration_seconds": 300.0, "stdout_truncated": false, "stdout_bytes_captured": 
+2026-08-23 14:24:06,403 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:25:06.
+2026-08-23 14:24:06,404 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 14:24:06,405 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:25:06.
+2026-08-23 14:24:06,479 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 14:24:06,480 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 14:25:14,323 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:28:04,464 WARNING tools.code_execution_tool: execute_code timed out after 300.0s (limit 300s) with 13 tool calls
+2026-08-23 14:28:04,466 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (303.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 13, "duration_seconds": 300.0, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 14:29:44,416 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:30:44.
+2026-08-23 14:29:44,418 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 14:29:44,418 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:30:44.
+2026-08-23 14:29:44,498 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 14:29:44,498 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 14:32:25,020 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:34:01,793 WARNING tools.code_execution_tool: execute_code timed out after 300.0s (limit 300s) with 6 tool calls
+2026-08-23 14:34:01,795 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (303.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 6, "duration_seconds": 300.0, "stdout_truncated": false, "stdout_bytes_captured": 
+2026-08-23 14:40:10,929 WARNING tools.code_execution_tool: execute_code timed out after 300.01s (limit 300s) with 0 tool calls
+2026-08-23 14:40:10,932 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (303.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 0, "duration_seconds": 300.01, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 14:44:46,758 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:46:53,249 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=529784 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 14:48:26,772 WARNING agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:49:26.
+2026-08-23 14:48:26,773 WARNING agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 14:48:26,773 WARNING agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 14:49:26.
+2026-08-23 14:48:26,846 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 14:48:26,846 WARNING agent.auxiliary_client: Auxiliary approval: connection error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 14:52:55,237 WARNING tools.code_execution_tool: execute_code timed out after 300.01s (limit 300s) with 2 tool calls
+2026-08-23 14:52:55,239 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (302.14s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 2, "duration_seconds": 300.01, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 14:53:52,520 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (5.14s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+2026-08-23 14:54:07,022 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.47s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+2026-08-23 14:54:14,636 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.37s): {"output": "", "exit_code": 1, "error": null, "exit_code_meaning": "No matches found (not an error)"}
+
+[Tool loop warning: same_tool_failure_warning; count=3; terminal has failed 3 times this turn. Th
+2026-08-23 14:57:18,033 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:12:36,616 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:14:18,651 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:15:14,515 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:18:04,986 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:19:15,570 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool web_extract returned error (0.32s): {
+  "results": [
+    {
+      "url": "https://www.ompfinex.com/bug-bounty",
+      "title": "",
+      "content": "",
+      "error": "Keyless Exa extract failed: Unrecognized MCP response shape. Set EXA_
+2026-08-23 15:26:19,674 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:27:19.
+2026-08-23 15:26:19,676 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 15:26:19,677 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:27:19.
+2026-08-23 15:26:19,746 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 15:26:19,747 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:26:19,968 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=320407 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 15:26:19,969 WARNING [20260823_131544_2a18953d] run_agent: OpenAI client aborted (agent_close_in_flight, shared=False, tcp_force_closed=0, deferred_close=stranger_thread) thread=bg-review:140110410544832 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free — no sockets found; in-flight request may keep running until the provider finishes
+2026-08-23 15:26:31,350 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:26:31,351 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:26:41,761 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:26:41,761 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:33:03,735 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=393514 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 15:34:15,711 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:34:42,130 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:35:42.
+2026-08-23 15:34:42,132 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 15:34:42,132 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:35:42.
+2026-08-23 15:34:42,220 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 15:34:42,220 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:34:42,267 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 1/2, retrying in 2.3s): send_path_degraded
+2026-08-23 15:34:44,616 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 2/2, retrying in 4.0s): send_path_degraded
+2026-08-23 15:35:15,086 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:35:15,086 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:37:05,735 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:39:38,652 WARNING [20260823_131544_2a18953d] agent.chat_completion_helpers: Non-streaming API call stale for 240s (threshold 240s). model=free context=~100,352 tokens. Killing connection.
+2026-08-23 15:39:40,654 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 1/3) error_type=TimeoutError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=Non-streaming API call timed out after 240s with no response (threshold: 240s)
+2026-08-23 15:39:40,655 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 2.8486082399448303s (attempt 1/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Non-streaming API call timed out after 240s with no response (threshold: 240s)
+2026-08-23 15:39:52,239 WARNING agent.codex_runtime: Codex streaming attempt superseded by a newer stream; stopping consumption to preserve the single-writer invariant (model=free).
+2026-08-23 15:42:56,277 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:43:56.
+2026-08-23 15:42:56,279 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 15:42:56,279 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:43:56.
+2026-08-23 15:42:56,354 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 15:42:56,354 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:42:56,960 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=443188 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 15:43:24,162 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:43:24,162 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:43:31,889 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:43:31,890 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:43:51,329 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:43:51,329 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:43:57,543 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:44:57.
+2026-08-23 15:43:57,545 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 15:43:57,546 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:44:57.
+2026-08-23 15:43:57,574 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 15:43:57,574 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:57:05,351 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:05,352 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 2.1032636048340287s (attempt 1/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:57:07,923 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 2/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:07,924 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 4.204305539126077s (attempt 2/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:57:13,041 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 3/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:13,049 ERROR [20260823_131544_2a18953d] agent.conversation_loop: API call failed after 3 retries. HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+ | provider=openai-api model=free msgs=197 tokens=~111,437
+2026-08-23 15:57:36,641 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:36,642 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 2.0115577564541804s (attempt 1/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:57:39,257 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 2/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:39,258 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 4.643467598904056s (attempt 2/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:57:44,887 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 3/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:44,891 ERROR [20260823_131544_2a18953d] agent.conversation_loop: API call failed after 3 retries. HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+ | provider=openai-api model=free msgs=198 tokens=~111,537
+2026-08-23 15:57:45,483 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking openrouter unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:58:45.
+2026-08-23 15:57:45,484 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
+2026-08-23 15:57:45,484 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 15:58:45.
+2026-08-23 15:57:45,587 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter, nous, local/custom, api-key)
+2026-08-23 15:57:45,587 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:57:46,253 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:46,253 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 2.824762233423111s (attempt 1/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:57:49,645 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 2/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:49,647 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 5.008788573221942s (attempt 2/3) thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:57:55,774 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 3/3) error_type=RateLimitError thread=hermes-gateway_1:140110917506752 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:55,778 ERROR [20260823_131544_2a18953d] agent.conversation_loop: API call failed after 3 retries. HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+ | provider=openai-api model=free msgs=198 tokens=~111,567
+2026-08-23 15:57:56,368 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:57:56,369 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:57:57,085 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:57:57,086 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 2.966249959673325s (attempt 1/3) thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:58:00,522 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 2/3) error_type=RateLimitError thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:58:00,523 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 4.916069592272447s (attempt 2/3) thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:58:06,657 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 3/3) error_type=RateLimitError thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:58:06,662 ERROR [20260823_131544_2a18953d] agent.conversation_loop: API call failed after 3 retries. HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+ | provider=openai-api model=free msgs=198 tokens=~111,659
+2026-08-23 15:58:07,326 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and no fallback available (tried: openrouter (unhealthy), nous (unhealthy), local/custom, api-key)
+2026-08-23 15:58:07,326 WARNING [20260823_131544_2a18953d] agent.auxiliary_client: Auxiliary goal_judge: auth error on auto and all fallbacks exhausted (fallback_chain + main agent model). Raising original error.
+2026-08-23 15:58:08,150 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 1/3) error_type=RateLimitError thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:58:08,151 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 2.6340336256685757s (attempt 1/3) thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:58:11,404 WARNING [20260823_131544_2a18953d] agent.conversation_loop: API call failed (attempt 2/3) error_type=RateLimitError thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free summary=HTTP 429: [400]: {
+    "error": {
+        "code": "400",
+        "message": "Unsupported model mimo-auto"
+    }
+}
+
+2026-08-23 15:58:11,406 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Retrying API call in 5.624158126755141s (attempt 2/3) thread=hermes-gateway_0:140111538800320 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free policy=default error=Error code: 429 - {'error': {'message': '[400]: {\n    "error": {\n        "code": "400",\n        "message": "Unsupported model mimo-auto"\n    }\n}\n'}}
+2026-08-23 15:59:18,854 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:05:44,539 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 16:05:44,540 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 16:06:45,912 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:07:44,296 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 16:07:44,297 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 16:14:43,052 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:22:52,856 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:32:23,128 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (10.25s): {"output": "wc: /tmp/alert_module.js: No such file or directory", "exit_code": 1, "error": null}
+2026-08-23 16:38:26,548 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 16:38:26,548 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 16:51:02,089 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:58:16,230 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:15:25,942 WARNING tools.code_execution_tool: execute_code timed out after 300.01s (limit 300s) with 0 tool calls
+2026-08-23 17:15:25,944 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (300.01s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 0, "duration_seconds": 300.01, "stdout_truncated": false, "stdout_bytes_captured":
+2026-08-23 17:21:11,738 WARNING tools.code_execution_tool: execute_code timed out after 300.0s (limit 300s) with 0 tool calls
+2026-08-23 17:21:11,742 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (300.05s): {"status": "timeout", "output": "⏰ Script timed out after 300s and was killed.", "exit_code": -15, "tool_calls_made": 0, "duration_seconds": 300.0, "stdout_truncated": false, "stdout_bytes_captured": 
+2026-08-23 17:22:34,071 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:27:10,930 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:29:46,587 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:35:27,676 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 17:35:27,676 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 17:49:44,804 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 17:49:44,805 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 17:49:54,803 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 17:49:54,804 WARNING [20260823_131544_2a18953d] agent.conversation_loop: Invalid API response (retry 2/3): response.output is empty | Provider: model=free
+2026-08-23 17:57:25,349 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:01:16,419 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:08:28,774 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:08:35,497 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=767486 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 18:08:35,498 WARNING [20260823_131544_2a18953d] run_agent: OpenAI client aborted (agent_close_in_flight, shared=False, tcp_force_closed=0, deferred_close=stranger_thread) thread=bg-review:140110410544832 provider=openai-api base_url=https://9router-production-e31c.up.railway.app/v1 model=free — no sockets found; in-flight request may keep running until the provider finishes
+2026-08-23 18:24:02,632 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:25:37,520 WARNING agent.codex_runtime: Codex Responses request failed: serialized_request_body_bytes=367798 stream_opened=false exception_chain=APIConnectionError <- ReadError <- ReadError model=free
+2026-08-23 18:28:04,448 WARNING tools.registry: check_fn check_bfl_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:04,774 WARNING tools.registry: check_fn check_browser_back_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:05,077 WARNING tools.registry: check_fn _browser_cdp_check returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:05,407 WARNING tools.registry: check_fn check_browser_click_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:05,711 WARNING tools.registry: check_fn check_browser_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:06,104 WARNING tools.registry: check_fn _browser_dialog_check returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:06,105 WARNING tools.registry: check_fn is_browser_use_cli_mode returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:06,431 WARNING tools.registry: check_fn check_browser_navigate_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:06,754 WARNING tools.registry: check_fn check_browser_press_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:07,089 WARNING tools.registry: check_fn check_browser_scroll_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:07,438 WARNING tools.registry: check_fn check_browser_snapshot_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:07,806 WARNING tools.registry: check_fn check_browser_type_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:08,159 WARNING tools.registry: check_fn check_browser_vision_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:08,160 WARNING tools.registry: check_fn check_computer_use_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:08,162 WARNING tools.registry: check_fn check_image_generation_requirements returned False; dependent tools will be unavailable this turn
+2026-08-23 18:28:17,049 WARNING [20260823_182808_8fba9f] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:17,050 WARNING [20260823_182808_8fba9f] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 18:28:17,096 WARNING [20260823_182808_790e98] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:17,097 WARNING [20260823_182808_790e98] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 18:28:17,161 WARNING [20260823_182808_5ad5ca] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:17,162 WARNING [20260823_182808_5ad5ca] agent.conversation_loop: Invalid API response (retry 1/3): response.output is empty | Provider: model=free
+2026-08-23 18:28:28,302 WARNING [20260823_182808_8fba9f] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:28,303 WARNING [20260823_182808_8fba9f] agent.conversation_loop: Invalid API response (retry 2/3): response.output is empty | Provider: model=free
+2026-08-23 18:28:28,389 WARNING [20260823_182808_5ad5ca] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:28,390 WARNING [20260823_182808_5ad5ca] agent.conversation_loop: Invalid API response (retry 2/3): response.output is empty | Provider: model=free
+2026-08-23 18:28:29,344 WARNING [20260823_182808_790e98] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:29,344 WARNING [20260823_182808_790e98] agent.conversation_loop: Invalid API response (retry 2/3): response.output is empty | Provider: model=free
+2026-08-23 18:28:44,773 WARNING [20260823_182808_8fba9f] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:44,775 ERROR [20260823_182808_8fba9f] agent.conversation_loop: [subagent-0] Invalid API response after 3 retries.
+2026-08-23 18:28:44,777 WARNING [20260823_182808_5ad5ca] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:44,779 ERROR [20260823_182808_5ad5ca] agent.conversation_loop: [subagent-1] Invalid API response after 3 retries.
+2026-08-23 18:28:46,130 WARNING [20260823_182808_790e98] agent.conversation_loop: Codex response.output is empty after stream backfill (status=completed, incomplete_details=None, model=free). api_mode=codex_responses provider=openai-api
+2026-08-23 18:28:46,132 ERROR [20260823_182808_790e98] agent.conversation_loop: [subagent-2] Invalid API response after 3 retries.
+2026-08-23 18:29:08,415 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool terminal returned error (0.09s): {"output": "/usr/bin/bash: line 3: cd: /data/workspace/backups/backup2: No such file or directory", "exit_code": 126, "error": null, "hint": "Exit 126: the file was found but is not executable — `chmo
+2026-08-23 18:30:23,860 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:33:36,814 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:52:03,164 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:54:58,950 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:00:09,345 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:25:37,143 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:28:34,187 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:31:05,099 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:38:47,858 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:47:53,959 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:49:32,643 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:55:12,550 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:58:45,825 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:07:06,175 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:15:08,624 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:22:11,015 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:23:35,860 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:28:11,172 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:31:37,752 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:43:27,428 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:51:02,414 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:57:49,886 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:00:22,669 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:03:47,948 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (190.26s): {"status": "error", "output": "\n--- stderr ---\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 1348, in do_open\n    h.request(req.get_method(), req.
+2026-08-23 21:05:51,626 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:24:18,131 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:43:09,015 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:49:45,616 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:53:35,326 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:55:09,390 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:56:39,308 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:01:41,995 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (2.41s): {"status": "error", "output": "759500000000000000 -> 422 {\"status\":\"VALIDATION_ERROR\",\"message\":\"The \\u0634\\u0646\\u0627\\u0633\\u0647 is not valid.\",\"errors\":{\"id\":[\"The \\u0634\\u0646
+2026-08-23 22:05:53,217 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (240.17s): {"status": "error", "output": "\n--- stderr ---\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 1348, in do_open\n    h.request(req.get_method(), req.
+2026-08-23 22:21:25,145 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:21:51,422 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (2/5) — previous session still held open on Telegram's servers. Waiting 30s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:27:42,136 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:38:23,197 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:41:08,987 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:44:40,455 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:46:11,211 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:46:48,035 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:04:26,480 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (0.46s): {"status": "error", "output": "{'applicationId': ''} -> 422 {\"status\":\"VALIDATION_ERROR\",\"message\":\"The application id is not valid.\",\"errors\":{\"applicationId\":[\"The application id is not
+2026-08-23 23:09:27,219 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:28:54,126 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:37:13,221 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (225.57s): {"status": "error", "output": "'-MZqpfTLmXnKj8hYvQw2' -> 422: {\"status\":\"VALIDATION_ERROR\",\"message\":\"The application id is not valid.\",\"errors\":{\"applicationId\":[\"The application id is n
+2026-08-23 23:38:39,754 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:47:43,335 WARNING [20260823_131544_2a18953d] agent.tool_executor: Tool execute_code returned error (46.31s): {"status": "error", "output": "\n--- stderr ---\nTraceback (most recent call last):\n  File \"/usr/local/lib/python3.11/urllib/request.py\", line 1348, in do_open\n    h.request(req.get_method(), req.
+2026-08-23 23:48:17,566 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:49:56,982 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:56:27,040 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:58:17,305 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:59:45,569 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running

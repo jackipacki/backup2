@@ -1,0 +1,191 @@
+---
+name: tridentstack-cve-api
+description: Free CVE search API with CVSS, EPSS, KEV, and fix versions.
+version: 0.1.0
+author: Hermes
+metadata:
+  hermes:
+    tags: [Security, CVE, Vulnerability, API]
+---
+
+# TridentStack CVE API
+
+Free, no-auth API for CVE vulnerability data. Returns CVSS, EPSS, CISA KEV status, CWEs, and **remediation** (fixed versions per affected product) — the only free API that does this.
+
+## When to Use
+
+- Lookup a specific CVE by ID (e.g. `CVE-2024-3094`)
+- Search CVEs by keyword, severity, EPSS score, or KEV status
+- Find **which version fixes** a vulnerability for a specific package
+- Batch-check up to 100 CVEs in one request
+- Get CVE data in OSV schema (compatible with Trivy, Grype, Renovate)
+- Triage vulnerabilities by exploit probability (EPSS) + active exploitation (KEV)
+
+## Prerequisites
+
+- No API key required
+- No authentication required
+- Rate limit: 60 requests/minute (check `X-RateLimit-Remaining` header)
+
+## Base URL
+
+```
+https://tridentstack.com/api/v1
+```
+
+## Endpoints
+
+### 1. Get Single CVE (full detail)
+
+```
+GET /api/v1/cve/{cveId}
+```
+
+Response keys: `cveId`, `description`, `severity`, `cvss`, `epss`, `kev`, `cwes`, `remediation`, `references`, `publishedAt`, `modifiedAt`, `dataSources`, `_links`
+
+`remediation.products[].atoms[]` contains: `fixedVersion`, `advisoryId`, `source`, `sourceUrl`
+
+Invoke through `terminal`:
+```bash
+curl -s "https://tridentstack.com/api/v1/cve/CVE-2024-3094" | python3 -m json.tool
+```
+
+### 2. Get CVE in OSV Schema
+
+```
+GET /api/v1/cve/{cveId}/osv
+```
+
+Same CVE data in OpenSSF OSV format (schema v1.6.0). Use with vulnerability scanners.
+
+```bash
+curl -s "https://tridentstack.com/api/v1/cve/CVE-2024-3094/osv"
+```
+
+### 3. Batch Lookup (up to 100 CVEs)
+
+```
+POST /api/v1/cve/batch
+Content-Type: application/json
+Body: {"ids": ["CVE-2024-3094", "CVE-2021-44228"]}
+```
+
+Response: `results[]` (full records) + `notFound[]` (unresolved IDs).
+
+```bash
+curl -s -X POST "https://tridentstack.com/api/v1/cve/batch" \
+  -H "Content-Type: application/json" \
+  -d '{"ids":["CVE-2024-3094","CVE-2021-44228"]}'
+```
+
+### 4. Search & List CVEs
+
+```
+GET /api/v1/cve
+```
+
+**Query Parameters:**
+
+| Param | Type | Description |
+|---|---|---|
+| `q` | string | Full-text search (CVE IDs, keywords, products) |
+| `severity` | string | `critical`, `high`, `medium`, `low` |
+| `kev` | bool | `true` = only CISA Known Exploited Vulns |
+| `fix` | bool | `true` = only CVEs with available fixes |
+| `epss_min` | float | Minimum EPSS score (0.0 - 1.0) |
+| `year` | int | CVE published year (e.g. `2024`) |
+| `sort` | string | `published`, `epss`, `cvss`, `cve`, `fix`, `kev` |
+| `limit` | int | Results per page (max 100, default 20) |
+| `nextCursor` | string | Pagination cursor from previous response |
+
+**Example — critical CVEs with high EPSS, sorted by EPSS:**
+```bash
+curl -s "https://tridentstack.com/api/v1/cve?severity=critical&epss_min=0.8&sort=epss&limit=5"
+```
+
+**Pagination:** Response includes `nextCursor` when more pages exist. Pass it as `?nextCursor=<value>` for the next page.
+
+## Response Shapes
+
+**Single CVE / batch item:**
+```json
+{
+  "cveId": "CVE-2024-3094",
+  "description": "...",
+  "severity": "CRITICAL",
+  "cvss": {"version":"3","baseScore":10,"severity":"CRITICAL","vector":"CVSS:3.1/..."},
+  "epss": {"score":0.85974,"percentile":0.99714},
+  "kev": null,
+  "cwes": ["CWE-506"],
+  "remediation": {
+    "available": true,
+    "products": [{
+      "ecosystem": "debian",
+      "product": "xz-utils",
+      "atoms": [{"fixedVersion":"5.6.1+really5.4.5-1","advisoryId":"DSA-5649-1","source":"Debian Security Tracker"}]
+    }]
+  },
+  "references": [{"url":"...","tags":["Vendor Advisory"]}],
+  "dataSources": [{"name":"NVD","license":"Public domain"}]
+}
+```
+
+**Search result item (lighter):**
+```json
+{
+  "cveId": "CVE-2024-3094",
+  "severity": "CRITICAL",
+  "cvss": 10.0,
+  "cvssVersion": "3.x",
+  "epss": 0.85974,
+  "isKev": false,
+  "hasRemediation": true,
+  "publishedAt": "2024-03-29T17:15:21.150Z",
+  "_links": {"self": "/api/v1/cve/CVE-2024-3094"}
+}
+```
+
+## Common Workflows
+
+### Find "what to patch tonight"
+```bash
+# Active exploitation (KEV) + high exploit probability (EPSS) + fixes available
+curl -s "https://tridentstack.com/api/v1/cve?kev=true&fix=true&sort=epss&limit=10"
+```
+
+### Check if a package is affected + which version fixes it
+```bash
+# Get full CVE detail
+curl -s "https://tridentstack.com/api/v1/cve/CVE-2024-3094" | \
+  python3 -c "import sys,json; d=json.load(sys.stdin); \
+  [print(f'{p[\"product\"]} ({p[\"ecosystem\"]}): fix={a[\"fixedVersion\"]}') \
+   for p in d['remediation']['products'] for a in p['atoms']]"
+```
+
+### Scan a list of CVEs from a file
+```bash
+# One CVE per line in cve_list.txt, batch them (max 100 per request)
+IDS=$(cat cve_list.txt | head -100 | jq -R . | jq -s .)
+curl -s -X POST "https://tridentstack.com/api/v1/cve/batch" \
+  -H "Content-Type: application/json" \
+  -d "{\"ids\":$IDS}"
+```
+
+## Pitfalls
+
+- **Rate limit is 60 req/min** per IP. Check `X-RateLimit-Remaining` in response headers. On 429, wait for `Retry-After` header value.
+- **Search results are lighter** than single-CVE results (no remediation, no full CVSS object). Use the search endpoint to discover CVEs, then GET individual ones for full detail.
+- **`kev: null`** in single-CVE response means "not in CISA KEV list" (not an error).
+- **`year` param** filters by CVE ID year prefix, not publication date.
+- **Batch max is 100 IDs** per request. Split larger lists into chunks.
+- **OSV endpoint** returns the same CVE in OSV schema — use it when feeding scanners like Trivy/Grype/Renovate.
+
+## Verification
+
+```bash
+# Should return a valid CVE record with remediation data
+curl -s "https://tridentstack.com/api/v1/cve/CVE-2024-3094" | \
+  python3 -c "import sys,json; d=json.load(sys.stdin); \
+  assert d['cveId']=='CVE-2024-3094' and d['remediation']['available']==True, 'FAIL'; \
+  print('OK:', d['severity'], 'CVSS:', d['cvss']['baseScore'])"
+```

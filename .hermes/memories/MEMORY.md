@@ -1,0 +1,3 @@
+backup repo: github.com/jackipacki/backup2 — only /data/.hermes/ should be backed up (not all /data/) — port 22 blocked, use HTTPS for git
+§
+Bug bounty hunter on Basalam.com (via ravro.ir). HIGH threshold: only wants exploitable vulns — RCE, SQLi, SSRF w/ OOB, Account Takeover, Double Spending. Rejects IDOR on public profiles, CORS alone, CSP, info disclosure, SMS/mobile leak as "بی ارزش". Rules: can't prove → don't mention; no public/info-disclosure findings; cross-subdomain user data access NOT a vulnerability; keep going until real exploit found.

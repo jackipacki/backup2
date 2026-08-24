@@ -1,0 +1,924 @@
+2026-08-23 07:23:51,609 INFO gateway.control_socket: Gateway control socket listening at /data/.hermes/gateway.sock
+2026-08-23 07:23:51,675 INFO gateway.run: Starting Hermes Gateway...
+2026-08-23 07:23:51,676 INFO gateway.run: Session storage: /data/.hermes/sessions
+2026-08-23 07:23:51,680 INFO gateway.run: Agent budget: max_iterations=500 (agent.max_turns from config.yaml, or HERMES_MAX_ITERATIONS from .env, or default 500)
+2026-08-23 07:23:51,681 INFO gateway.run: Secret redaction: ENABLED (tool output, logs, and chat responses are scrubbed before delivery)
+2026-08-23 07:23:51,734 INFO gateway.run: Connecting to telegram...
+2026-08-23 07:23:51,741 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Discovering Telegram API fallback IPs via DNS-over-HTTPS…
+2026-08-23 07:23:51,825 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Auto-discovered Telegram fallback IPs: 149.154.166.110
+2026-08-23 07:23:51,825 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram fallback IPs active: 149.154.166.110
+2026-08-23 07:23:51,842 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Connecting to Telegram (attempt 1/8)…
+2026-08-23 07:23:51,862 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-08-23 07:24:01,896 INFO plugins.platforms.telegram.telegram_network: [Telegram] Using sticky IPv4 Telegram API path 149.154.166.110 (dual-stack hostname tried last — #87015)
+2026-08-23 07:24:01,897 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 1)
+2026-08-23 07:24:01,935 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Connected to Telegram (polling mode)
+2026-08-23 07:24:02,237 INFO gateway.run: ✓ telegram connected
+2026-08-23 07:24:02,322 INFO gateway.run: Gateway running with 1 platform(s)
+2026-08-23 07:24:02,338 INFO gateway.run: Channel directory built: 0 target(s)
+2026-08-23 07:24:02,360 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeDefault (60 cmds)
+2026-08-23 07:24:02,374 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllPrivateChats (60 cmds)
+2026-08-23 07:24:02,396 INFO hermes_plugins.telegram_platform.adapter: [Telegram] set_my_commands OK for scope BotCommandScopeAllGroupChats (60 cmds)
+2026-08-23 07:24:02,396 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram menu: 60 commands registered, 79 hidden (over 60 limit). Use /commands for full list.
+2026-08-23 07:24:03,358 INFO gateway.run: Press Ctrl+C to stop
+2026-08-23 07:24:03,369 INFO gateway.run: kanban dispatcher: holding singleton dispatcher lock (/data/.hermes/kanban/.dispatcher.lock)
+2026-08-23 07:24:03,370 INFO gateway.run: kanban dispatcher: kanban.max_in_progress unset; using memory-derived default max_in_progress=8 (set kanban.max_in_progress in config.yaml to override)
+2026-08-23 07:24:03,380 INFO gateway.run: Gateway housekeeping started (interval=60s)
+2026-08-23 07:24:08,371 INFO gateway.run: kanban dispatcher: embedded in gateway (interval=60.0s)
+2026-08-23 07:24:28,428 INFO gateway.run: Ignoring /start platform ping for session agent:main:telegram:dm:8101830414
+2026-08-23 07:24:49,779 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (76 chars)
+2026-08-23 07:24:49,793 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='مدل دیفالتت رو روی این تنظیم کن  Model switched to free Provider: openai-api' reply_to_id=None reply_to_text=''
+2026-08-23 07:25:51,642 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=61.8s api_calls=7 response=549 chars
+2026-08-23 07:25:51,701 INFO gateway.platforms.base: [Telegram] Sending response (549 chars) to 8101830414
+2026-08-23 07:26:25,040 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (681 chars)
+2026-08-23 07:26:25,049 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='مموریت رو خالی کن و این رو اضافه کن همیشه فارسی صحبت کن § اگه ازت خواستم کاری رو' reply_to_id=None reply_to_text=''
+2026-08-23 07:27:21,901 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=56.9s api_calls=8 response=632 chars
+2026-08-23 07:27:21,955 INFO gateway.platforms.base: [Telegram] Sending response (632 chars) to 8101830414
+2026-08-23 07:27:38,760 INFO gateway.run: User opted out of destructive slash confirm (session=agent:main:telegram:dm:8101830414)
+2026-08-23 07:27:38,761 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 3 (session_reset)
+2026-08-23 07:27:43,819 INFO gateway.platforms.base: [Telegram] Sending response (110 chars) to 8101830414
+2026-08-23 07:28:24,804 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[/learn] The user wants you to learn a reusable skill from the request below, an' reply_to_id=None reply_to_text=''
+2026-08-23 07:29:29,810 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:29:50,834 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 07:29:56,874 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (2/5) — previous session still held open on Telegram's servers. Waiting 30s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:30:27,895 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 2/5; health pending getUpdates progress
+2026-08-23 07:30:37,902 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 3)
+2026-08-23 07:38:10,728 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=585.9s api_calls=24 response=1545 chars
+2026-08-23 07:38:10,789 INFO gateway.platforms.base: [Telegram] Sending response (1545 chars) to 8101830414
+2026-08-23 07:42:13,583 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (37 chars)
+2026-08-23 07:42:13,596 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='یه توضیح راجب چیزایی که یاد گرفتی بده' reply_to_id=None reply_to_text=''
+2026-08-23 07:42:50,293 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:42:59,159 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=45.6s api_calls=1 response=4193 chars
+2026-08-23 07:42:59,190 INFO gateway.platforms.base: [Telegram] Sending response (4193 chars) to 8101830414
+2026-08-23 07:43:11,330 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 07:43:21,346 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 4)
+2026-08-23 07:44:28,159 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (55 chars)
+2026-08-23 07:44:28,168 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='چطور چنین اسکیل هایی مینویسن؟ چطور منم یه اسکیل بنویسم؟' reply_to_id=None reply_to_text=''
+2026-08-23 07:45:12,099 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=43.9s api_calls=2 response=3985 chars
+2026-08-23 07:45:12,133 INFO gateway.platforms.base: [Telegram] Sending response (3985 chars) to 8101830414
+2026-08-23 07:52:36,074 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:52:57,097 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 07:53:07,107 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 5)
+2026-08-23 07:53:40,068 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 7 (session_reset)
+2026-08-23 07:53:40,466 INFO gateway.platforms.base: [Telegram] Sending response (248 chars) to 8101830414
+2026-08-23 07:53:54,202 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (46 chars)
+2026-08-23 07:53:54,210 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='چه منابعی api رایگان برای سرچ توی CVE ها دارن؟' reply_to_id=None reply_to_text=''
+2026-08-23 07:54:33,927 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=39.7s api_calls=2 response=4531 chars
+2026-08-23 07:54:33,961 INFO gateway.platforms.base: [Telegram] Sending response (4531 chars) to 8101830414
+2026-08-23 07:56:15,806 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (23 chars)
+2026-08-23 07:56:15,817 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='کدوم کامل تر و سریع تره' reply_to_id=None reply_to_text=''
+2026-08-23 07:56:35,199 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 07:56:56,216 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 07:56:56,623 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=40.8s api_calls=1 response=1879 chars
+2026-08-23 07:56:56,656 INFO gateway.platforms.base: [Telegram] Sending response (1879 chars) to 8101830414
+2026-08-23 07:56:56,667 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 1/2, retrying in 2.5s): send_path_degraded
+2026-08-23 07:56:59,175 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 2/2, retrying in 4.8s): send_path_degraded
+2026-08-23 07:57:03,952 ERROR gateway.platforms.base: [Telegram] Failed to deliver response after 2 retries: send_path_degraded
+2026-08-23 07:57:06,227 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 6)
+2026-08-23 08:00:23,102 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (23 chars)
+2026-08-23 08:00:23,113 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='کدوم کامل تر و سریع تره' reply_to_id=None reply_to_text=''
+2026-08-23 08:02:59,543 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=156.4s api_calls=3 response=1713 chars
+2026-08-23 08:02:59,596 INFO gateway.platforms.base: [Telegram] Sending response (1713 chars) to 8101830414
+2026-08-23 08:03:43,061 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:04:04,090 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:04:14,103 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 7)
+2026-08-23 08:06:34,413 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (14 chars)
+2026-08-23 08:06:34,423 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='کدوم کامل تره؟' reply_to_id=None reply_to_text=''
+2026-08-23 08:06:47,260 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=12.8s api_calls=1 response=826 chars
+2026-08-23 08:06:47,354 INFO gateway.platforms.base: [Telegram] Sending response (826 chars) to 8101830414
+2026-08-23 08:07:17,003 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[/learn] The user wants you to learn a reusable skill from the request below, an' reply_to_id=None reply_to_text=''
+2026-08-23 08:11:06,645 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=229.6s api_calls=13 response=743 chars
+2026-08-23 08:11:06,703 INFO gateway.platforms.base: [Telegram] Sending response (743 chars) to 8101830414
+2026-08-23 08:11:30,100 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 13 (session_reset)
+2026-08-23 08:11:30,425 INFO gateway.platforms.base: [Telegram] Sending response (268 chars) to 8101830414
+2026-08-23 08:11:33,544 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (265 chars)
+2026-08-23 08:11:33,551 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='هر ۲۴ ساعت یکبار یک بک آپ از کل فایل هات بگیر و توی اینجا اپلود کن   https://git' reply_to_id=None reply_to_text=''
+2026-08-23 08:11:46,664 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:11:55,720 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=22.2s api_calls=4 response=47 chars
+2026-08-23 08:11:55,753 INFO gateway.platforms.base: [Telegram] Sending response (47 chars) to 8101830414
+2026-08-23 08:12:07,702 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:12:17,714 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 8)
+2026-08-23 08:15:50,559 INFO gateway.platforms.base: [Telegram] Sending response (220 chars) to 8101830414
+2026-08-23 08:15:50,628 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:17:19,623 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=always, user=Ares)
+2026-08-23 08:17:57,460 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=126.8s api_calls=8 response=39 chars
+2026-08-23 08:18:12,910 INFO gateway.platforms.base: [Telegram] Sending response (39 chars) to 8101830414
+2026-08-23 08:18:13,003 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:18:50,800 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=37.8s api_calls=3 response=81 chars
+2026-08-23 08:19:03,460 INFO gateway.platforms.base: [Telegram] Sending response (81 chars) to 8101830414
+2026-08-23 08:19:03,960 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:19:15,555 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:19:36,580 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:19:46,594 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 9)
+2026-08-23 08:20:06,058 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=62.1s api_calls=8 response=229 chars
+2026-08-23 08:20:22,058 INFO gateway.platforms.base: [Telegram] Sending response (229 chars) to 8101830414
+2026-08-23 08:20:22,188 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:22:26,020 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=123.8s api_calls=4 response=52 chars
+2026-08-23 08:22:37,458 INFO gateway.platforms.base: [Telegram] Sending response (52 chars) to 8101830414
+2026-08-23 08:22:37,537 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:22:52,838 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=15.3s api_calls=1 response=181 chars
+2026-08-23 08:23:07,748 INFO gateway.platforms.base: [Telegram] Sending response (181 chars) to 8101830414
+2026-08-23 08:23:07,839 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:23:45,981 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=38.1s api_calls=2 response=58 chars
+2026-08-23 08:24:00,944 INFO gateway.platforms.base: [Telegram] Sending response (58 chars) to 8101830414
+2026-08-23 08:24:01,065 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده کرون جاب هم تنظیم کن براش' reply_to_id=None reply_to_text=''
+2026-08-23 08:25:33,556 INFO gateway.delivery: Cron output preserved for chunking adapter (129664 chars) — full output saved to /data/.hermes/cron/output/72cc36357d3d_20260823_082533.txt
+2026-08-23 08:25:44,595 INFO gateway.run: Watch pattern notification — injecting for telegram chat=8101830414 thread=None
+2026-08-23 08:25:49,790 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 08:26:03,355 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=122.3s api_calls=1 response=748 chars
+2026-08-23 08:26:03,417 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (42 chars)
+2026-08-23 08:26:13,526 INFO gateway.platforms.base: [Telegram] Sending response (748 chars) to 8101830414
+2026-08-23 08:26:13,627 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='صبر کن همه ی فایل ها نه فقط /data/.hermes/' reply_to_id=None reply_to_text=''
+2026-08-23 08:26:53,349 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=39.7s api_calls=2 response=46 chars
+2026-08-23 08:26:53,405 INFO gateway.platforms.base: [Telegram] Sending response (46 chars) to 8101830414
+2026-08-23 08:27:59,787 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 23 (session_reset)
+2026-08-23 08:28:00,177 INFO gateway.platforms.base: [Telegram] Sending response (264 chars) to 8101830414
+2026-08-23 08:33:14,542 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:33:35,590 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:33:45,603 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 10)
+2026-08-23 08:36:59,530 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:37:20,561 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:37:30,569 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 11)
+2026-08-23 08:37:54,502 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:38:15,529 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:38:25,537 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 12)
+2026-08-23 08:39:11,007 INFO gateway.platforms.base: [Telegram] Sending response (811 chars) to 8101830414
+2026-08-23 08:39:11,112 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='با استفاده از اسکیل هایی که داری ازت میخوام توی بانتی مشارکت کنی ۱. هر چیزی که پ' reply_to_id=None reply_to_text=''
+2026-08-23 08:39:18,155 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:39:34,385 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=23.3s api_calls=2 response=110 chars
+2026-08-23 08:39:39,191 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:39:49,198 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 13)
+2026-08-23 08:39:49,344 INFO gateway.platforms.base: [Telegram] Sending response (110 chars) to 8101830414
+2026-08-23 08:39:49,404 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: با استفاده از اسکیل هایی که داری از' reply_to_id=None reply_to_text=''
+2026-08-23 08:40:10,809 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=21.4s api_calls=1 response=1473 chars
+2026-08-23 08:40:26,523 INFO gateway.platforms.base: [Telegram] Sending response (1473 chars) to 8101830414
+2026-08-23 08:40:32,186 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 26 (session_reset)
+2026-08-23 08:40:32,530 INFO gateway.platforms.base: [Telegram] Sending response (260 chars) to 8101830414
+2026-08-23 08:42:12,854 INFO gateway.platforms.base: [Telegram] Sending response (896 chars) to 8101830414
+2026-08-23 08:42:12,930 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو دستیار من برای باگ بانتی هستی از اولین مورد لیست شروع میکنیم با استفاده از اس' reply_to_id=None reply_to_text=''
+2026-08-23 08:42:38,243 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=25.3s api_calls=1 response=1470 chars
+2026-08-23 08:42:56,103 INFO gateway.platforms.base: [Telegram] Sending response (1470 chars) to 8101830414
+2026-08-23 08:43:17,487 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 28 (session_reset)
+2026-08-23 08:43:17,862 INFO gateway.platforms.base: [Telegram] Sending response (278 chars) to 8101830414
+2026-08-23 08:43:32,824 INFO gateway.platforms.base: [Telegram] Sending response (721 chars) to 8101830414
+2026-08-23 08:43:32,896 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو دستیار  من برای یافت باگ در باگ بانتی هستی خب از اولین لیست وبسایت های دارای ' reply_to_id=None reply_to_text=''
+2026-08-23 08:44:41,124 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (100 chars)
+2026-08-23 08:45:00,951 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=88.1s api_calls=5 response=1545 chars
+2026-08-23 08:45:01,002 INFO gateway.platforms.base: [Telegram] Sending response (1545 chars) to 8101830414
+2026-08-23 08:45:21,726 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 30 (session_reset)
+2026-08-23 08:45:21,857 INFO gateway.platforms.base: [Telegram] Sending response (264 chars) to 8101830414
+2026-08-23 08:45:56,898 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (149 chars)
+2026-08-23 08:45:56,909 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='برو داخل اسکیل هات رو ببین هر کدوم یک از اسکیل ها که متنی راجب بررسی مجوز بانتی ' reply_to_id=None reply_to_text=''
+2026-08-23 08:46:33,728 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 32 (stop_command)
+2026-08-23 08:46:33,744 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 08:46:33,744 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 08:46:33,764 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8101830414: Stop requested
+2026-08-23 08:46:33,764 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8101830414 — generation 31 is no longer current
+2026-08-23 08:46:35,186 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 33 (session_reset)
+2026-08-23 08:46:35,249 INFO gateway.platforms.base: [Telegram] Sending response (252 chars) to 8101830414
+2026-08-23 08:46:43,769 INFO gateway.platforms.base: [Telegram] Sending response (370 chars) to 8101830414
+2026-08-23 08:46:43,908 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='برو داخل اسکیل هات رو ببین هر کدوم یک از اسکیل ها که متنی راجب بررسی مجوز بانتی ' reply_to_id=None reply_to_text=''
+2026-08-23 08:48:09,237 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=85.3s api_calls=9 response=4501 chars
+2026-08-23 08:48:31,193 INFO gateway.platforms.base: [Telegram] Sending response (4501 chars) to 8101830414
+2026-08-23 08:48:53,414 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:49:14,434 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:49:22,533 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 14)
+2026-08-23 08:49:22,552 INFO gateway.platforms.base: [Telegram] Sending response (221 chars) to 8101830414
+2026-08-23 08:49:22,617 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='هر متنی که در این باره هست رو حذف کن' reply_to_id=None reply_to_text=''
+2026-08-23 08:52:31,185 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=188.6s api_calls=6 response=86 chars
+2026-08-23 08:52:42,734 INFO gateway.platforms.base: [Telegram] Sending response (86 chars) to 8101830414
+2026-08-23 08:52:42,812 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: هر متنی که در این باره هست رو حذف ک' reply_to_id=None reply_to_text=''
+2026-08-23 08:53:27,359 INFO gateway.run: kanban dispatcher: reaped 1 zombie worker(s), pids=[3839]
+2026-08-23 08:54:57,125 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=134.3s api_calls=5 response=1171 chars
+2026-08-23 08:55:08,678 INFO gateway.platforms.base: [Telegram] Sending response (1171 chars) to 8101830414
+2026-08-23 08:55:37,671 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (53 chars)
+2026-08-23 08:55:37,688 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='همه چیز رو حذف کردی یا فقط متون مربوطه به بررسی مجوز؟' reply_to_id=None reply_to_text=''
+2026-08-23 08:55:57,245 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 08:55:57,387 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=19.7s api_calls=1 response=1157 chars
+2026-08-23 08:55:57,440 INFO gateway.platforms.base: [Telegram] Sending response (1157 chars) to 8101830414
+2026-08-23 08:56:18,273 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 08:56:28,283 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 15)
+2026-08-23 08:57:10,982 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 38 (session_reset)
+2026-08-23 08:57:11,346 INFO gateway.platforms.base: [Telegram] Sending response (243 chars) to 8101830414
+2026-08-23 08:57:20,745 INFO gateway.platforms.base: [Telegram] Sending response (896 chars) to 8101830414
+2026-08-23 08:57:20,912 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو دستیار من برای باگ بانتی هستی از اولین مورد لیست شروع میکنیم با استفاده از اس' reply_to_id=None reply_to_text=''
+2026-08-23 08:58:17,756 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 40 (new_command)
+2026-08-23 08:58:17,763 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 41 (session_reset)
+2026-08-23 08:58:17,820 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8101830414: Session reset requested
+2026-08-23 08:58:17,820 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8101830414 — generation 39 is no longer current
+2026-08-23 08:58:17,887 INFO gateway.platforms.base: [Telegram] Sending command '/new' response (244 chars) to 8101830414
+2026-08-23 09:00:54,356 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:01:15,383 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:01:25,393 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 16)
+2026-08-23 09:06:12,847 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:06:33,883 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:06:43,892 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 17)
+2026-08-23 09:07:31,075 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:07:52,104 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:08:02,113 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 18)
+2026-08-23 09:08:30,552 INFO gateway.platforms.base: [Telegram] Sending response (2676 chars) to 8101830414
+2026-08-23 09:08:30,637 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو دستیار من برای باگ بانتی هستی از اولین مورد لیست شروع میکنیم لینک تایید وجود ' reply_to_id=None reply_to_text=''
+2026-08-23 09:10:02,245 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=91.6s api_calls=6 response=99 chars
+2026-08-23 09:10:23,143 INFO gateway.platforms.base: [Telegram] Sending response (99 chars) to 8101830414
+2026-08-23 09:10:23,253 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تو دستیار من برای باگ بانتی هستی از' reply_to_id=None reply_to_text=''
+2026-08-23 09:11:43,862 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 44 (stop_command)
+2026-08-23 09:11:43,871 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 09:11:43,872 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 09:14:48,034 INFO gateway.platforms.base: [Telegram] Sending response (2609 chars) to 8101830414
+2026-08-23 09:14:48,152 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='تو دستیار من برای باگ بانتی هستی از اولین مورد لیست شروع میکنیم لینک تایید وجود ' reply_to_id=None reply_to_text=''
+2026-08-23 09:14:48,398 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (4873 chars)
+2026-08-23 09:14:54,213 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 46 (stop_command)
+2026-08-23 09:14:54,229 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 09:14:54,230 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 09:14:54,250 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8101830414: Stop requested
+2026-08-23 09:14:54,250 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8101830414 — generation 45 is no longer current
+2026-08-23 09:15:01,325 INFO gateway.platforms.base: [Telegram] Sending response (15 chars) to 8101830414
+2026-08-23 09:16:04,596 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Cached user document at /data/.hermes/cache/documents/doc_9bdcd13a185c_message.txt (text/plain)
+2026-08-23 09:16:04,604 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Content of message.txt]: تو دستیار من برای باگ بانتی هستی از اولین مورد لیست شر' reply_to_id=None reply_to_text=''
+2026-08-23 09:18:17,180 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-23 09:19:22,737 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:19:43,763 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:19:53,773 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 19)
+2026-08-23 09:20:57,379 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:21:18,400 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:21:28,420 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 20)
+2026-08-23 09:22:43,798 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:23:04,817 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:23:14,825 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 21)
+2026-08-23 09:27:05,464 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=always, user=Ares)
+2026-08-23 09:31:37,798 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (80 chars)
+2026-08-23 09:33:47,409 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1062.8s api_calls=9 response=266 chars
+2026-08-23 09:33:47,438 INFO gateway.platforms.base: [Telegram] Sending response (266 chars) to 8101830414
+2026-08-23 09:33:50,838 INFO gateway.platforms.base: [Telegram] Sending response (23 chars) to 8101830414
+2026-08-23 09:33:53,322 INFO gateway.platforms.base: [Telegram] Sending response (15 chars) to 8101830414
+2026-08-23 09:34:53,705 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:35:14,732 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:35:24,740 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 22)
+2026-08-23 09:37:43,568 INFO gateway.platforms.base: [Telegram] Sending response (73 chars) to 8101830414
+2026-08-23 09:37:48,650 INFO gateway.platforms.base: [Telegram] Sending response (2493 chars) to 8101830414
+2026-08-23 09:37:48,740 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: تو دستیار من برای باگ بانتی هستی از' reply_to_id=None reply_to_text=''
+2026-08-23 09:38:08,539 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (52 chars)
+2026-08-23 09:38:20,653 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:38:41,672 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:38:51,681 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 23)
+2026-08-23 09:40:04,855 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=136.1s api_calls=4 response=2018 chars
+2026-08-23 09:40:16,410 INFO gateway.platforms.base: [Telegram] Sending response (2018 chars) to 8101830414
+2026-08-23 09:40:40,219 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 49 (session_reset)
+2026-08-23 09:40:40,567 INFO gateway.platforms.base: [Telegram] Sending response (264 chars) to 8101830414
+2026-08-23 09:43:50,997 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Cached user document at /data/.hermes/cache/documents/doc_097f48988a54_message.txt (text/plain)
+2026-08-23 09:43:51,011 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Content of message.txt]: تو دستیار من برای باگ بانتی هستی از اولین مورد لیست شر' reply_to_id=None reply_to_text=''
+2026-08-23 09:45:12,673 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=81.7s api_calls=5 response=51 chars
+2026-08-23 09:45:12,716 INFO gateway.platforms.base: [Telegram] Sending response (51 chars) to 8101830414
+2026-08-23 09:46:25,577 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Cached replied-to document at /data/.hermes/cache/documents/doc_daed98554123_message.txt
+2026-08-23 09:46:25,592 INFO gateway.platforms.base: [Telegram] extract_local_files found 1 file(s) in response
+2026-08-23 09:46:25,593 INFO gateway.platforms.base: [Telegram] Sending response (241 chars) to 8101830414
+2026-08-23 09:46:25,772 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="ادامه بده [Replied-to document 'message.txt' saved at: /data/.hermes/cache/docum" reply_to_id=None reply_to_text=''
+2026-08-23 09:48:40,679 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=134.9s api_calls=7 response=51 chars
+2026-08-23 09:49:03,633 INFO gateway.platforms.base: [Telegram] Sending response (51 chars) to 8101830414
+2026-08-23 09:49:03,689 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 09:50:17,328 INFO gateway.run: Watch pattern notification — injecting for telegram chat=8101830414 thread=None
+2026-08-23 09:52:13,197 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 09:52:20,838 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=197.1s api_calls=1 response=322 chars
+2026-08-23 09:52:40,800 INFO gateway.platforms.base: [Telegram] Sending response (322 chars) to 8101830414
+2026-08-23 09:52:40,908 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 09:52:42,961 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 09:53:03,981 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 09:53:13,988 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 24)
+2026-08-23 09:54:41,683 INFO gateway.run: Watch pattern notification — injecting for telegram chat=8101830414 thread=None
+2026-08-23 09:58:08,051 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 10:01:06,221 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=505.3s api_calls=4 response=47 chars
+2026-08-23 10:01:21,643 INFO gateway.platforms.base: [Telegram] Sending response (47 chars) to 8101830414
+2026-08-23 10:01:21,735 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:05:14,088 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:05:35,119 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:05:45,126 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 25)
+2026-08-23 10:07:33,828 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=372.1s api_calls=6 response=47 chars
+2026-08-23 10:07:49,894 INFO gateway.platforms.base: [Telegram] Sending response (47 chars) to 8101830414
+2026-08-23 10:07:49,982 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:09:25,653 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=95.7s api_calls=3 response=62 chars
+2026-08-23 10:09:35,819 INFO gateway.platforms.base: [Telegram] Sending response (62 chars) to 8101830414
+2026-08-23 10:09:35,943 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:11:22,612 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=106.7s api_calls=3 response=810 chars
+2026-08-23 10:11:46,645 INFO gateway.platforms.base: [Telegram] Sending response (810 chars) to 8101830414
+2026-08-23 10:11:46,759 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:14:21,599 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=154.8s api_calls=5 response=1907 chars
+2026-08-23 10:14:53,007 INFO gateway.platforms.base: [Telegram] Sending response (1907 chars) to 8101830414
+2026-08-23 10:14:53,100 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:15:41,572 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:16:02,602 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:16:12,616 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 26)
+2026-08-23 10:18:08,588 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=195.5s api_calls=3 response=50 chars
+2026-08-23 10:18:21,045 INFO gateway.platforms.base: [Telegram] Sending response (50 chars) to 8101830414
+2026-08-23 10:18:21,115 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:19:50,081 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=89.0s api_calls=3 response=65 chars
+2026-08-23 10:20:10,899 INFO gateway.platforms.base: [Telegram] Sending response (65 chars) to 8101830414
+2026-08-23 10:20:10,969 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:22:37,552 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 10:23:50,666 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=219.7s api_calls=2 response=1307 chars
+2026-08-23 10:24:20,157 INFO gateway.platforms.base: [Telegram] Sending response (1307 chars) to 8101830414
+2026-08-23 10:24:49,632 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:25:10,659 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:25:20,667 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 27)
+2026-08-23 10:27:01,437 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (37 chars)
+2026-08-23 10:27:01,446 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='داری بر اساس اسکیل هات پیش میری دیگه؟' reply_to_id=None reply_to_text=''
+2026-08-23 10:27:12,464 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=11.0s api_calls=1 response=131 chars
+2026-08-23 10:27:12,498 INFO gateway.platforms.base: [Telegram] Sending response (131 chars) to 8101830414
+2026-08-23 10:31:58,928 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:32:19,954 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:32:29,961 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 28)
+2026-08-23 10:34:35,028 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:34:56,053 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:35:06,070 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 29)
+2026-08-23 10:35:53,306 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:36:14,343 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:36:24,356 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 30)
+2026-08-23 10:40:02,869 INFO gateway.platforms.base: [Telegram] extract_local_files found 1 file(s) in response
+2026-08-23 10:40:02,869 INFO gateway.platforms.base: [Telegram] Sending response (125 chars) to 8101830414
+2026-08-23 10:40:03,571 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:40:22,374 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=18.8s api_calls=2 response=74 chars
+2026-08-23 10:40:44,315 INFO gateway.platforms.base: [Telegram] Sending response (74 chars) to 8101830414
+2026-08-23 10:40:44,387 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:41:02,218 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=17.8s api_calls=1 response=75 chars
+2026-08-23 10:41:37,487 INFO gateway.platforms.base: [Telegram] Sending response (75 chars) to 8101830414
+2026-08-23 10:41:37,550 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:42:45,337 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=67.8s api_calls=2 response=177 chars
+2026-08-23 10:43:02,490 INFO gateway.platforms.base: [Telegram] Sending response (177 chars) to 8101830414
+2026-08-23 10:43:02,567 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:44:49,233 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:45:10,258 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:45:20,268 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 31)
+2026-08-23 10:46:27,091 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=204.5s api_calls=3 response=45 chars
+2026-08-23 10:46:41,351 INFO gateway.platforms.base: [Telegram] Sending response (45 chars) to 8101830414
+2026-08-23 10:46:41,445 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:48:59,031 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=137.6s api_calls=3 response=53 chars
+2026-08-23 10:49:21,546 INFO gateway.platforms.base: [Telegram] Sending response (53 chars) to 8101830414
+2026-08-23 10:49:21,678 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: ادامه بده [Replied-to document 'mes" reply_to_id=None reply_to_text=''
+2026-08-23 10:49:58,905 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:50:19,924 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:50:26,207 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 32)
+2026-08-23 10:50:26,390 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (90 chars)
+2026-08-23 10:51:09,387 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 68 (stop_command)
+2026-08-23 10:51:09,394 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 10:51:09,395 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 10:51:09,411 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8101830414: Stop requested
+2026-08-23 10:51:09,423 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8101830414 — generation 67 is no longer current
+2026-08-23 10:51:12,974 INFO gateway.platforms.base: [Telegram] Sending response (275 chars) to 8101830414
+2026-08-23 10:51:13,039 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='دوتا آیدوری که پیدا کردی مهم نیستن و عمومین راجب SSRF ای که پیدا کردی بگو و یافت' reply_to_id=None reply_to_text=''
+2026-08-23 10:52:13,995 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=61.0s api_calls=1 response=2965 chars
+2026-08-23 10:52:29,999 INFO gateway.platforms.base: [Telegram] Sending response (2964 chars) to 8101830414
+2026-08-23 10:54:49,243 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 10:55:10,271 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 10:55:10,527 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 33)
+2026-08-23 10:55:10,550 INFO gateway.platforms.base: [Telegram] Sending response (500 chars) to 8101830414
+2026-08-23 10:55:10,610 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='راجب ssrf بیشتر توضیح بده متوجه نشدم و دقیق بگو چیکار میشه کرد و بکن ببین جواب م' reply_to_id=None reply_to_text=''
+2026-08-23 10:55:27,579 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=17.0s api_calls=1 response=48 chars
+2026-08-23 10:55:44,948 INFO gateway.platforms.base: [Telegram] Sending response (48 chars) to 8101830414
+2026-08-23 10:55:45,178 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 10:56:02,235 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=17.1s api_calls=1 response=382 chars
+2026-08-23 10:56:10,037 INFO gateway.platforms.base: [Telegram] Sending response (382 chars) to 8101830414
+2026-08-23 10:56:10,168 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 10:57:45,298 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=95.1s api_calls=3 response=1046 chars
+2026-08-23 10:57:56,178 INFO gateway.platforms.base: [Telegram] Sending response (1046 chars) to 8101830414
+2026-08-23 10:57:56,278 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 10:59:38,100 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (63 chars)
+2026-08-23 11:00:30,418 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=154.1s api_calls=3 response=2809 chars
+2026-08-23 11:00:53,786 INFO gateway.platforms.base: [Telegram] Sending response (2803 chars) to 8101830414
+2026-08-23 11:00:53,907 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 11:01:14,686 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=20.8s api_calls=1 response=80 chars
+2026-08-23 11:01:24,758 INFO gateway.platforms.base: [Telegram] Sending response (80 chars) to 8101830414
+2026-08-23 11:01:24,831 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 11:01:33,378 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:01:54,402 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:02:04,416 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 34)
+2026-08-23 11:03:38,739 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:03:59,764 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:04:09,772 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 35)
+2026-08-23 11:04:36,636 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=191.8s api_calls=7 response=732 chars
+2026-08-23 11:04:50,311 INFO gateway.platforms.base: [Telegram] Sending response (732 chars) to 8101830414
+2026-08-23 11:04:50,465 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 11:04:58,619 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=8.2s api_calls=1 response=72 chars
+2026-08-23 11:05:11,785 INFO gateway.platforms.base: [Telegram] Sending response (72 chars) to 8101830414
+2026-08-23 11:05:11,879 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب ssrf بیشتر توضیح بده متوجه نشد' reply_to_id=None reply_to_text=''
+2026-08-23 11:05:16,514 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 78 (stop_command)
+2026-08-23 11:05:16,522 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 11:05:16,522 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 11:05:16,540 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8101830414: Stop requested
+2026-08-23 11:05:16,540 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8101830414 — generation 77 is no longer current
+2026-08-23 11:06:24,288 INFO gateway.platforms.base: [Telegram] Sending response (476 chars) to 8101830414
+2026-08-23 11:06:24,383 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='ادامه بده و آسیب پذیری پیدا کن اگه نتونستی ثابتش کنی حرفشم نزن اگه دیدی نمیشه آس' reply_to_id=None reply_to_text=''
+2026-08-23 11:09:25,290 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=180.9s api_calls=5 response=45 chars
+2026-08-23 11:10:00,767 INFO gateway.platforms.base: [Telegram] Sending response (45 chars) to 8101830414
+2026-08-23 11:10:00,902 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 11:20:08,948 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:20:29,968 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:20:39,976 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 36)
+2026-08-23 11:28:20,007 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 11:28:33,961 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1113.1s api_calls=1 response=54 chars
+2026-08-23 11:28:49,184 INFO gateway.platforms.base: [Telegram] Sending response (54 chars) to 8101830414
+2026-08-23 11:28:49,250 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 11:33:31,135 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:33:52,156 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:34:02,166 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 37)
+2026-08-23 11:34:06,679 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:34:27,699 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:34:31,391 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=342.1s api_calls=9 response=54 chars
+2026-08-23 11:34:37,707 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 38)
+2026-08-23 11:34:52,527 INFO gateway.platforms.base: [Telegram] Sending response (54 chars) to 8101830414
+2026-08-23 11:34:52,626 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 11:40:22,784 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:40:43,805 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:40:53,813 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 39)
+2026-08-23 11:43:26,333 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 11:44:07,062 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:44:28,080 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:44:38,092 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 40)
+2026-08-23 11:50:25,051 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:50:46,076 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:50:56,087 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 41)
+2026-08-23 11:53:20,605 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 11:53:41,642 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 11:53:51,656 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 42)
+2026-08-23 11:58:38,250 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1425.6s api_calls=14 response=1045 chars
+2026-08-23 11:59:01,936 INFO gateway.platforms.base: [Telegram] Sending response (1045 chars) to 8101830414
+2026-08-23 11:59:02,080 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 12:05:48,252 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:05:53,678 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 12:06:09,271 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:06:19,282 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 43)
+2026-08-23 12:06:39,706 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:07:00,725 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:07:10,734 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 44)
+2026-08-23 12:10:26,750 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=always, user=Ares)
+2026-08-23 12:12:00,066 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=778.0s api_calls=11 response=720 chars
+2026-08-23 12:12:16,405 INFO gateway.platforms.base: [Telegram] Sending response (720 chars) to 8101830414
+2026-08-23 12:12:16,489 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 12:19:40,968 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=444.5s api_calls=7 response=981 chars
+2026-08-23 12:20:32,586 INFO gateway.platforms.base: [Telegram] Sending response (981 chars) to 8101830414
+2026-08-23 12:20:32,700 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 12:20:46,958 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 12:21:43,978 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=71.3s api_calls=5 response=1292 chars
+2026-08-23 12:22:16,821 INFO gateway.platforms.base: [Telegram] Sending response (1292 chars) to 8101830414
+2026-08-23 12:22:16,919 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: ادامه بده و آسیب پذیری پیدا کن اگه ' reply_to_id=None reply_to_text=''
+2026-08-23 12:23:01,196 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 87 (stop_command)
+2026-08-23 12:23:01,206 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 12:23:01,208 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 12:23:01,241 INFO gateway.run: Ignoring control interrupt message for session agent:main:telegram:dm:8101830414: Stop requested
+2026-08-23 12:23:01,241 INFO gateway.run: Discarding stale agent result for agent:main:telegram:dm:8101830414 — generation 86 is no longer current
+2026-08-23 12:23:16,106 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:23:37,145 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:23:47,156 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 45)
+2026-08-23 12:24:06,083 INFO gateway.platforms.base: [Telegram] Sending response (300 chars) to 8101830414
+2026-08-23 12:24:06,166 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='آسیب پذیری هایی که تا الان پیدا کردی بی ارزش هستن و به درد نمیخورن. ادامه بده چی' reply_to_id=None reply_to_text=''
+2026-08-23 12:25:25,399 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=79.2s api_calls=1 response=45 chars
+2026-08-23 12:25:38,826 INFO gateway.platforms.base: [Telegram] Sending response (45 chars) to 8101830414
+2026-08-23 12:25:38,905 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: آسیب پذیری هایی که تا الان پیدا کرد' reply_to_id=None reply_to_text=''
+2026-08-23 12:26:06,726 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=27.8s api_calls=2 response=114 chars
+2026-08-23 12:26:17,381 INFO gateway.platforms.base: [Telegram] Sending response (114 chars) to 8101830414
+2026-08-23 12:26:17,482 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: آسیب پذیری هایی که تا الان پیدا کرد' reply_to_id=None reply_to_text=''
+2026-08-23 12:26:26,602 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=9.1s api_calls=1 response=72 chars
+2026-08-23 12:26:40,595 INFO gateway.platforms.base: [Telegram] Sending response (72 chars) to 8101830414
+2026-08-23 12:26:40,679 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: آسیب پذیری هایی که تا الان پیدا کرد' reply_to_id=None reply_to_text=''
+2026-08-23 12:27:17,551 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=36.9s api_calls=2 response=377 chars
+2026-08-23 12:27:22,245 INFO gateway.platforms.base: [Telegram] Sending response (377 chars) to 8101830414
+2026-08-23 12:27:22,370 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: آسیب پذیری هایی که تا الان پیدا کرد' reply_to_id=None reply_to_text=''
+2026-08-23 12:30:59,228 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=216.9s api_calls=3 response=80 chars
+2026-08-23 12:31:24,459 INFO gateway.platforms.base: [Telegram] Sending response (80 chars) to 8101830414
+2026-08-23 12:31:24,565 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: آسیب پذیری هایی که تا الان پیدا کرد' reply_to_id=None reply_to_text=''
+2026-08-23 12:33:21,137 INFO gateway.run: Watch pattern notification — injecting for telegram chat=8101830414 thread=None
+2026-08-23 12:45:32,502 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:45:53,526 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:46:03,540 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 46)
+2026-08-23 12:46:40,984 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:47:02,005 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:47:12,031 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 47)
+2026-08-23 12:47:22,354 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 12:47:50,583 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 12:52:30,068 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:52:51,087 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:52:54,272 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1289.7s api_calls=5 response=80 chars
+2026-08-23 12:53:01,095 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 48)
+2026-08-23 12:53:11,864 INFO gateway.platforms.base: [Telegram] Sending response (80 chars) to 8101830414
+2026-08-23 12:53:11,988 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: آسیب پذیری هایی که تا الان پیدا کرد' reply_to_id=None reply_to_text=''
+2026-08-23 12:56:36,239 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=204.3s api_calls=4 response=843 chars
+2026-08-23 12:56:58,353 INFO gateway.platforms.base: [Telegram] Sending response (843 chars) to 8101830414
+2026-08-23 12:59:14,303 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 12:59:35,345 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 12:59:45,354 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 49)
+2026-08-23 13:04:28,458 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (25 chars)
+2026-08-23 13:04:28,472 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='مشکل چیه؟ چه کارایی کردی؟' reply_to_id=None reply_to_text=''
+2026-08-23 13:04:50,973 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=22.5s api_calls=1 response=1481 chars
+2026-08-23 13:04:51,004 INFO gateway.platforms.base: [Telegram] Sending response (1481 chars) to 8101830414
+2026-08-23 13:06:26,025 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (16 chars)
+2026-08-23 13:06:26,053 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='Mass Assignment؟' reply_to_id=None reply_to_text=''
+2026-08-23 13:06:44,249 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=18.2s api_calls=1 response=130 chars
+2026-08-23 13:06:44,285 INFO gateway.platforms.base: [Telegram] Sending response (130 chars) to 8101830414
+2026-08-23 13:07:22,682 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:07:43,867 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:07:53,880 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 50)
+2026-08-23 13:09:46,411 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (19 chars)
+2026-08-23 13:09:46,420 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='Mass Assignment چیه' reply_to_id=None reply_to_text=''
+2026-08-23 13:10:01,792 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=15.4s api_calls=1 response=839 chars
+2026-08-23 13:10:01,830 INFO gateway.platforms.base: [Telegram] Sending response (839 chars) to 8101830414
+2026-08-23 13:10:27,614 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:10:48,671 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:10:58,688 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 51)
+2026-08-23 13:11:56,156 INFO gateway.platforms.base: [Telegram] Sending response (305 chars) to 8101830414
+2026-08-23 13:11:56,221 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='همه ی فیلد ها رو امتحان کن و ادامه بده و آسیب پذیری های بیشتری کشف کن و تا وقتی ' reply_to_id=None reply_to_text=''
+2026-08-23 13:12:11,508 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=15.3s api_calls=2 response=72 chars
+2026-08-23 13:12:26,041 INFO gateway.platforms.base: [Telegram] Sending response (72 chars) to 8101830414
+2026-08-23 13:12:26,121 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: همه ی فیلد ها رو امتحان کن و ادامه ' reply_to_id=None reply_to_text=''
+2026-08-23 13:12:29,815 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:12:50,834 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:13:00,848 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 52)
+2026-08-23 13:15:43,499 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 100 (stop_command)
+2026-08-23 13:15:43,510 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 13:15:43,511 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 13:15:44,126 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 101 (session_reset)
+2026-08-23 13:15:44,314 INFO gateway.platforms.base: [Telegram] Sending response (251 chars) to 8101830414
+2026-08-23 13:18:08,805 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:18:29,840 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:18:39,855 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 53)
+2026-08-23 13:21:12,560 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:21:33,593 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:21:43,604 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 54)
+2026-08-23 13:27:58,003 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:28:19,029 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:28:29,039 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 55)
+2026-08-23 13:29:32,802 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:29:53,823 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:30:03,830 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 56)
+2026-08-23 13:31:34,054 INFO gateway.platforms.base: [Telegram] Sending response (390 chars) to 8101830414
+2026-08-23 13:31:34,117 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='این وبسایت برنامه بانتی داره https://www.ompfinex.com/bug-bounty ازت میخوام بری ' reply_to_id=None reply_to_text=''
+2026-08-23 13:32:16,353 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=42.2s api_calls=6 response=151 chars
+2026-08-23 13:32:29,509 INFO gateway.platforms.base: [Telegram] Sending response (151 chars) to 8101830414
+2026-08-23 13:32:29,723 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 13:35:28,887 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=179.2s api_calls=18 response=61 chars
+2026-08-23 13:35:43,899 INFO gateway.platforms.base: [Telegram] Sending response (61 chars) to 8101830414
+2026-08-23 13:35:43,983 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 13:37:21,958 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:37:42,980 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:37:52,991 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 57)
+2026-08-23 13:44:57,495 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:45:18,548 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:45:28,556 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 58)
+2026-08-23 13:51:42,643 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=958.7s api_calls=13 response=79 chars
+2026-08-23 13:51:48,654 INFO gateway.platforms.base: [Telegram] Sending response (79 chars) to 8101830414
+2026-08-23 13:51:48,734 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 13:52:22,090 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=33.4s api_calls=3 response=56 chars
+2026-08-23 13:52:36,087 INFO gateway.platforms.base: [Telegram] Sending response (56 chars) to 8101830414
+2026-08-23 13:52:36,159 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 13:56:25,150 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 13:56:46,172 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 13:56:56,182 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 59)
+2026-08-23 13:57:35,180 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=299.0s api_calls=7 response=57 chars
+2026-08-23 13:57:38,857 INFO gateway.platforms.base: [Telegram] Sending response (57 chars) to 8101830414
+2026-08-23 13:57:38,943 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 14:06:43,950 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 14:13:17,417 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:13:38,438 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 14:13:48,447 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 60)
+2026-08-23 14:15:45,112 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:16:06,140 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 14:16:16,158 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 61)
+2026-08-23 14:19:07,419 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1288.5s api_calls=11 response=64 chars
+2026-08-23 14:19:15,097 INFO gateway.platforms.base: [Telegram] Sending response (64 chars) to 8101830414
+2026-08-23 14:19:15,203 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 14:21:59,177 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=164.0s api_calls=5 response=82 chars
+2026-08-23 14:22:19,257 INFO gateway.platforms.base: [Telegram] Sending response (82 chars) to 8101830414
+2026-08-23 14:22:19,346 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 14:25:14,323 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:25:35,350 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 14:25:45,363 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 62)
+2026-08-23 14:32:25,020 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:32:46,202 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 14:32:56,209 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 63)
+2026-08-23 14:41:24,701 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 14:41:40,935 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=1161.6s api_calls=2 response=89 chars
+2026-08-23 14:41:54,782 INFO gateway.platforms.base: [Telegram] Sending response (89 chars) to 8101830414
+2026-08-23 14:41:54,934 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 14:44:46,758 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:45:07,781 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 14:45:18,085 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 64)
+2026-08-23 14:46:39,715 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=284.8s api_calls=9 response=56 chars
+2026-08-23 14:46:52,844 INFO gateway.platforms.base: [Telegram] Sending response (56 chars) to 8101830414
+2026-08-23 14:46:52,956 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 14:52:50,083 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 1 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-23 14:52:53,627 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8101830414 (choice=once, user=Ares)
+2026-08-23 14:52:55,898 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-23 14:52:57,303 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-23 14:52:58,275 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-23 14:52:59,540 INFO hermes_plugins.telegram_platform.adapter: Telegram button resolved 0 approval(s) for session agent:main:telegram:dm:8101830414 (choice=session, user=Ares)
+2026-08-23 14:57:06,529 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=613.6s api_calls=14 response=121 chars
+2026-08-23 14:57:16,127 INFO gateway.platforms.base: [Telegram] Sending response (121 chars) to 8101830414
+2026-08-23 14:57:16,196 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 14:57:18,033 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 14:57:39,055 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 14:57:49,084 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 65)
+2026-08-23 15:01:16,951 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=240.8s api_calls=8 response=153 chars
+2026-08-23 15:01:57,928 INFO gateway.platforms.base: [Telegram] Sending response (153 chars) to 8101830414
+2026-08-23 15:01:58,075 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:06:10,621 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=252.5s api_calls=9 response=86 chars
+2026-08-23 15:06:26,910 INFO gateway.platforms.base: [Telegram] Sending response (86 chars) to 8101830414
+2026-08-23 15:06:26,986 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:11:30,320 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=303.3s api_calls=9 response=2554 chars
+2026-08-23 15:12:11,245 INFO gateway.platforms.base: [Telegram] Sending response (2554 chars) to 8101830414
+2026-08-23 15:12:11,341 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:12:24,779 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=13.4s api_calls=1 response=54 chars
+2026-08-23 15:12:30,861 INFO gateway.platforms.base: [Telegram] Sending response (54 chars) to 8101830414
+2026-08-23 15:12:30,931 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:12:36,616 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:12:57,648 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:13:07,657 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 66)
+2026-08-23 15:14:17,731 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=106.8s api_calls=3 response=63 chars
+2026-08-23 15:14:18,651 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:14:29,622 INFO gateway.platforms.base: [Telegram] Sending response (63 chars) to 8101830414
+2026-08-23 15:14:29,688 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:14:39,676 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:14:49,687 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 67)
+2026-08-23 15:15:14,515 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:15:35,539 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:15:45,548 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 68)
+2026-08-23 15:16:27,086 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=117.4s api_calls=4 response=130 chars
+2026-08-23 15:16:45,347 INFO gateway.platforms.base: [Telegram] Sending response (130 chars) to 8101830414
+2026-08-23 15:16:45,459 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:17:56,135 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=70.7s api_calls=3 response=77 chars
+2026-08-23 15:18:04,986 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:18:22,330 INFO gateway.platforms.base: [Telegram] Sending response (77 chars) to 8101830414
+2026-08-23 15:18:22,391 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:18:26,005 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:18:35,281 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=12.9s api_calls=1 response=57 chars
+2026-08-23 15:18:36,031 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 69)
+2026-08-23 15:18:52,478 INFO gateway.platforms.base: [Telegram] Sending response (57 chars) to 8101830414
+2026-08-23 15:18:52,545 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:20:24,849 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=92.3s api_calls=7 response=54 chars
+2026-08-23 15:20:44,693 INFO gateway.platforms.base: [Telegram] Sending response (54 chars) to 8101830414
+2026-08-23 15:20:44,801 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: این وبسایت برنامه بانتی داره https:' reply_to_id=None reply_to_text=''
+2026-08-23 15:20:51,286 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=6.5s api_calls=1 response=100 chars
+2026-08-23 15:21:08,492 INFO gateway.platforms.base: [Telegram] Sending response (100 chars) to 8101830414
+2026-08-23 15:25:53,638 INFO gateway.platforms.base: [Telegram] Sending response (2417 chars) to 8101830414
+2026-08-23 15:25:53,701 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='هرکدوم از چیزایی که پیدا کردی رو تست کن و سپس ببین بر اساس قوانین یه باگ شناخته ' reply_to_id=None reply_to_text=''
+2026-08-23 15:26:19,337 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=25.6s api_calls=1 response=884 chars
+2026-08-23 15:26:19,765 INFO gateway.platforms.base: [Telegram] Sending response (884 chars) to 8101830414
+2026-08-23 15:26:19,830 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: هرکدوم از چیزایی که پیدا کردی رو تس' reply_to_id=None reply_to_text=''
+2026-08-23 15:26:31,109 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=11.3s api_calls=1 response=85 chars
+2026-08-23 15:26:31,392 INFO gateway.platforms.base: [Telegram] Sending response (85 chars) to 8101830414
+2026-08-23 15:26:31,605 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: هرکدوم از چیزایی که پیدا کردی رو تس' reply_to_id=None reply_to_text=''
+2026-08-23 15:26:41,523 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=9.9s api_calls=1 response=64 chars
+2026-08-23 15:26:41,782 INFO gateway.platforms.base: [Telegram] Sending response (64 chars) to 8101830414
+2026-08-23 15:26:41,856 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: هرکدوم از چیزایی که پیدا کردی رو تس' reply_to_id=None reply_to_text=''
+2026-08-23 15:33:03,306 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 15:34:15,711 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:34:36,735 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:34:41,855 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=480.0s api_calls=4 response=1157 chars
+2026-08-23 15:34:42,242 INFO gateway.platforms.base: [Telegram] Sending response (1157 chars) to 8101830414
+2026-08-23 15:34:42,267 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 1/2, retrying in 2.3s): send_path_degraded
+2026-08-23 15:34:44,616 WARNING gateway.platforms.base: [Telegram] Send failed (attempt 2/2, retrying in 4.0s): send_path_degraded
+2026-08-23 15:34:46,749 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 70)
+2026-08-23 15:34:48,685 INFO gateway.platforms.base: [Telegram] Send succeeded on retry 2
+2026-08-23 15:34:48,701 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: هرکدوم از چیزایی که پیدا کردی رو تس' reply_to_id=None reply_to_text=''
+2026-08-23 15:35:14,819 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=26.1s api_calls=1 response=1749 chars
+2026-08-23 15:35:15,109 INFO gateway.platforms.base: [Telegram] Sending response (1749 chars) to 8101830414
+2026-08-23 15:35:38,473 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (401 chars)
+2026-08-23 15:35:38,482 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='راجب یافته مورد قبولی که پیدا کردی توضیح بده: " 🔴 OAuth2 PostMessage Token Theft' reply_to_id=None reply_to_text=''
+2026-08-23 15:37:05,735 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:37:26,760 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:37:36,768 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 71)
+2026-08-23 15:40:13,468 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=275.0s api_calls=2 response=607 chars
+2026-08-23 15:40:13,518 INFO gateway.platforms.base: [Telegram] Sending response (607 chars) to 8101830414
+2026-08-23 15:41:35,286 INFO gateway.platforms.base: [Telegram] Sending response (589 chars) to 8101830414
+2026-08-23 15:41:35,347 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='راجب یافته مورد قبولی که پیدا کردی توضیح بده: " 🔴 OAuth2 PostMessage Token Theft' reply_to_id=None reply_to_text=''
+2026-08-23 15:42:55,720 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=80.4s api_calls=3 response=4505 chars
+2026-08-23 15:42:56,378 INFO gateway.platforms.base: [Telegram] Sending response (4505 chars) to 8101830414
+2026-08-23 15:42:56,729 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب یافته مورد قبولی که پیدا کردی ' reply_to_id=None reply_to_text=''
+2026-08-23 15:43:23,907 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=27.2s api_calls=1 response=3971 chars
+2026-08-23 15:43:24,180 INFO gateway.platforms.base: [Telegram] Sending response (3971 chars) to 8101830414
+2026-08-23 15:43:24,310 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب یافته مورد قبولی که پیدا کردی ' reply_to_id=None reply_to_text=''
+2026-08-23 15:43:31,655 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=7.3s api_calls=1 response=51 chars
+2026-08-23 15:43:31,911 INFO gateway.platforms.base: [Telegram] Sending response (51 chars) to 8101830414
+2026-08-23 15:43:32,009 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب یافته مورد قبولی که پیدا کردی ' reply_to_id=None reply_to_text=''
+2026-08-23 15:43:51,104 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=19.1s api_calls=1 response=2817 chars
+2026-08-23 15:43:51,344 INFO gateway.platforms.base: [Telegram] Sending response (2817 chars) to 8101830414
+2026-08-23 15:43:51,471 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Continuing toward your standing goal] Goal: راجب یافته مورد قبولی که پیدا کردی ' reply_to_id=None reply_to_text=''
+2026-08-23 15:43:57,347 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=5.9s api_calls=1 response=87 chars
+2026-08-23 15:43:57,596 INFO gateway.platforms.base: [Telegram] Sending response (87 chars) to 8101830414
+2026-08-23 15:44:25,809 INFO gateway.platforms.base: [Telegram] Sending response (23 chars) to 8101830414
+2026-08-23 15:56:49,646 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Cached user document at /data/.hermes/cache/documents/doc_0fa71b96bbe0_message.txt (text/plain)
+2026-08-23 15:56:49,659 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='[Content of message.txt]: SESSION STARAGE:   _cltk\tks88mc data\t[object Object] f' reply_to_id=None reply_to_text=''
+2026-08-23 15:57:13,417 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=23.8s api_calls=2 response=147 chars
+2026-08-23 15:57:13,417 INFO gateway.run: Skipping transcript persistence for context-overflow failure in session 20260823_131544_2a18953d to prevent session growth loop.
+2026-08-23 15:57:13,449 INFO gateway.platforms.base: [Telegram] Sending response (146 chars) to 8101830414
+2026-08-23 15:57:35,721 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Cached replied-to document at /data/.hermes/cache/documents/doc_6e4fcac119a0_message.txt
+2026-08-23 15:57:35,755 INFO gateway.platforms.base: [Telegram] extract_local_files found 1 file(s) in response
+2026-08-23 15:57:35,755 INFO gateway.platforms.base: [Telegram] Sending response (238 chars) to 8101830414
+2026-08-23 15:57:35,898 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="resume [Replied-to document 'message.txt' saved at: /data/.hermes/cache/document" reply_to_id=None reply_to_text=''
+2026-08-23 15:57:45,250 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=9.4s api_calls=1 response=147 chars
+2026-08-23 15:57:45,250 INFO gateway.run: Skipping transcript persistence for context-overflow failure in session 20260823_131544_2a18953d to prevent session growth loop.
+2026-08-23 15:57:45,622 INFO gateway.platforms.base: [Telegram] Sending response (146 chars) to 8101830414
+2026-08-23 15:57:45,702 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: resume [Replied-to document 'messag" reply_to_id=None reply_to_text=''
+2026-08-23 15:57:56,109 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=10.4s api_calls=1 response=147 chars
+2026-08-23 15:57:56,109 INFO gateway.run: Skipping transcript persistence for context-overflow failure in session 20260823_131544_2a18953d to prevent session growth loop.
+2026-08-23 15:57:56,385 INFO gateway.platforms.base: [Telegram] Sending response (146 chars) to 8101830414
+2026-08-23 15:57:56,466 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: resume [Replied-to document 'messag" reply_to_id=None reply_to_text=''
+2026-08-23 15:58:07,064 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=10.6s api_calls=1 response=147 chars
+2026-08-23 15:58:07,064 INFO gateway.run: Skipping transcript persistence for context-overflow failure in session 20260823_131544_2a18953d to prevent session growth loop.
+2026-08-23 15:58:07,341 INFO gateway.platforms.base: [Telegram] Sending response (146 chars) to 8101830414
+2026-08-23 15:58:07,556 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: resume [Replied-to document 'messag" reply_to_id=None reply_to_text=''
+2026-08-23 15:58:12,937 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 138 (stop_command)
+2026-08-23 15:58:12,949 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 15:58:12,954 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 15:59:18,854 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 15:59:39,877 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 15:59:49,896 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 72)
+2026-08-23 16:00:23,557 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Cached replied-to document at /data/.hermes/cache/documents/doc_d1ce6200d2b8_message.txt
+2026-08-23 16:00:23,581 INFO gateway.platforms.base: [Telegram] extract_local_files found 1 file(s) in response
+2026-08-23 16:00:23,581 INFO gateway.platforms.base: [Telegram] Sending response (238 chars) to 8101830414
+2026-08-23 16:00:23,854 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="resume [Replied-to document 'message.txt' saved at: /data/.hermes/cache/document" reply_to_id=None reply_to_text=''
+2026-08-23 16:06:00,909 INFO gateway.run: response ready: platform=telegram chat=8101830414 time=337.1s api_calls=11 response=45 chars
+2026-08-23 16:06:08,496 INFO gateway.platforms.base: [Telegram] Sending response (45 chars) to 8101830414
+2026-08-23 16:06:08,831 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg="[Continuing toward your standing goal] Goal: resume [Replied-to document 'messag" reply_to_id=None reply_to_text=''
+2026-08-23 16:06:45,912 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:07:06,930 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 16:07:16,950 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 73)
+2026-08-23 16:14:43,052 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:15:04,085 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 16:15:14,094 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 74)
+2026-08-23 16:22:52,856 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:23:13,875 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 16:23:23,886 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 75)
+2026-08-23 16:51:02,089 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:51:23,109 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 16:51:33,127 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 76)
+2026-08-23 16:58:16,230 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 16:58:37,253 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 16:58:47,263 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 77)
+2026-08-23 17:22:34,071 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:22:55,091 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 17:23:05,102 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 78)
+2026-08-23 17:27:10,930 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:27:31,953 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 17:27:41,963 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 79)
+2026-08-23 17:29:46,587 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:30:07,614 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 17:30:17,625 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 80)
+2026-08-23 17:57:25,349 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 17:57:46,371 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 17:57:56,380 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 81)
+2026-08-23 18:01:16,419 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:01:37,457 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:01:47,466 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 82)
+2026-08-23 18:06:27,840 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (28 chars)
+2026-08-23 18:08:28,774 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:08:35,089 INFO gateway.run: Queued follow-up for session agent:main:telegram:dm:8101830414: final stream delivery not confirmed; sending first response before continuing.
+2026-08-23 18:08:49,799 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:08:59,808 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 83)
+2026-08-23 18:09:32,179 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (2755 chars)
+2026-08-23 18:09:32,181 INFO gateway.run: Demoting busy_input_mode 'interrupt' to 'queue' for session agent:main:telegram:dm:8101830414 because context compression is in flight (#56391)
+2026-08-23 18:22:37,687 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (48 chars)
+2026-08-23 18:24:02,632 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:24:23,649 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:24:33,656 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 84)
+2026-08-23 18:25:37,412 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (823 chars)
+2026-08-23 18:28:47,273 INFO gateway.run: Watch pattern notification — injecting for telegram chat=8101830414 thread=None
+2026-08-23 18:30:23,860 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:30:44,878 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:30:54,887 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 85)
+2026-08-23 18:32:08,993 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (120 chars)
+2026-08-23 18:33:36,814 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:33:57,839 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:34:07,852 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 86)
+2026-08-23 18:46:55,236 INFO gateway.run: Invalidated run generation for agent:main:telegram:dm:8101830414 → 141 (stop_command)
+2026-08-23 18:46:55,241 INFO gateway.run: STOP for session agent:main:telegram:dm:8101830414 — agent interrupted, session lock released
+2026-08-23 18:46:55,241 INFO gateway.platforms.base: [Telegram] Sending command '/stop' response (41 chars) to 8101830414
+2026-08-23 18:48:01,535 INFO gateway.platforms.base: [Telegram] Sending response (492 chars) to 8101830414
+2026-08-23 18:48:01,607 INFO gateway.run: inbound message: platform=telegram user=Ares chat=8101830414 msg='اول شرایط رو برای خودت توضیح بده و مشخص کن که داری چیکار میکنی و باید چیکار بکنی' reply_to_id=None reply_to_text=''
+2026-08-23 18:52:03,164 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:52:24,184 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:52:34,197 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 87)
+2026-08-23 18:54:58,950 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 18:55:19,974 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 18:55:29,986 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 88)
+2026-08-23 19:00:09,345 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:00:30,370 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:00:40,380 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 89)
+2026-08-23 19:25:37,143 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:25:58,166 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:26:08,175 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 90)
+2026-08-23 19:28:34,187 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:28:55,217 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:29:05,225 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 91)
+2026-08-23 19:31:05,099 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:31:26,133 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:31:36,147 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 92)
+2026-08-23 19:38:47,858 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:39:08,875 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:39:18,893 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 93)
+2026-08-23 19:47:53,959 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:48:14,977 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:48:24,993 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 94)
+2026-08-23 19:49:32,643 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:49:53,686 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:50:03,696 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 95)
+2026-08-23 19:55:12,550 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:55:33,585 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:55:43,593 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 96)
+2026-08-23 19:58:45,825 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 19:59:06,850 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 19:59:16,876 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 97)
+2026-08-23 20:07:06,175 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:07:27,195 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:07:37,206 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 98)
+2026-08-23 20:15:08,624 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:15:29,648 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:15:39,658 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 99)
+2026-08-23 20:22:11,015 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:22:32,042 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:22:42,050 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 100)
+2026-08-23 20:23:35,860 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:23:56,884 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:24:06,893 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 101)
+2026-08-23 20:28:11,172 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:28:32,195 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:28:42,206 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 102)
+2026-08-23 20:31:37,752 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:31:58,774 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:32:08,787 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 103)
+2026-08-23 20:32:21,271 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Flushing text batch agent:main:telegram:dm:8101830414 (59 chars)
+2026-08-23 20:43:27,428 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:43:48,476 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:43:58,503 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 104)
+2026-08-23 20:51:02,414 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:51:23,434 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:51:33,458 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 105)
+2026-08-23 20:57:49,886 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 20:58:10,910 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 20:58:20,926 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 106)
+2026-08-23 21:00:22,669 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:00:43,759 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:00:53,770 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 107)
+2026-08-23 21:05:51,626 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:06:12,648 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:06:22,656 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 108)
+2026-08-23 21:24:18,131 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:24:39,152 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:24:49,160 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 109)
+2026-08-23 21:43:09,015 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:43:30,045 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:43:40,059 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 110)
+2026-08-23 21:49:45,616 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:50:06,650 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:50:16,666 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 111)
+2026-08-23 21:53:35,326 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:53:56,345 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:54:06,353 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 112)
+2026-08-23 21:55:09,390 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:55:30,412 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:55:40,421 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 113)
+2026-08-23 21:56:39,308 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 21:57:00,330 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 21:57:10,338 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 114)
+2026-08-23 22:21:25,145 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:21:46,165 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:21:51,422 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (2/5) — previous session still held open on Telegram's servers. Waiting 30s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:22:22,452 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 2/5; health pending getUpdates progress
+2026-08-23 22:22:32,473 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 116)
+2026-08-23 22:27:42,136 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:28:03,159 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:28:13,175 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 117)
+2026-08-23 22:38:23,197 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:38:44,215 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:38:54,231 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 118)
+2026-08-23 22:41:08,987 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:41:30,013 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:41:40,026 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 119)
+2026-08-23 22:44:40,455 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:45:01,494 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:45:11,504 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 120)
+2026-08-23 22:46:11,211 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:46:32,243 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:46:42,259 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 121)
+2026-08-23 22:46:48,035 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 22:47:09,060 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 22:47:19,069 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 122)
+2026-08-23 23:09:27,219 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:09:48,241 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:09:58,250 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 123)
+2026-08-23 23:28:54,126 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:29:15,148 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:29:25,159 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 124)
+2026-08-23 23:38:39,754 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:39:00,783 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:39:10,791 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 125)
+2026-08-23 23:48:17,566 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:48:38,585 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:48:48,604 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 126)
+2026-08-23 23:49:56,982 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:50:18,026 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:50:28,043 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 127)
+2026-08-23 23:56:27,040 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:56:48,067 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:56:58,076 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 128)
+2026-08-23 23:58:17,305 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-23 23:58:38,322 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-23 23:58:48,338 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 129)
+2026-08-23 23:59:45,569 WARNING hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling conflict (1/5) — previous session still held open on Telegram's servers. Waiting 20s for it to expire. Error: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-08-24 00:00:06,607 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling restarted after conflict retry 1/5; health pending getUpdates progress
+2026-08-24 00:00:16,624 INFO hermes_plugins.telegram_platform.adapter: [Telegram] Telegram polling confirmed healthy: getUpdates progressing (generation 130)
